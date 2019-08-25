@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2019-05-30 Thu 00:21 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Analysis of the risk of failure of the O-rings on the Challenger shuttle</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Arnaud Legrand, Gabriel B. Sant'Anna" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Analysis of the risk of failure of the O-rings on the Challenger shuttle</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org23502fa">1. Loading the data</a></li>
+<li><a href="#orgc1da573">2. Graphical inspection</a></li>
+<li><a href="#orgf315110">3. Estimation of the temperature influence</a></li>
+<li><a href="#orgde94094">4. Estimation of the probability of O-ring malfunction</a></li>
+</ul>
+</div>
+</div>
+<p>
+On January 27, 1986, the day before the takeoff of the shuttle <i>Challenger</i>, a three-hour teleconference was held between Morton Thiokol (the manufacturer of one of the engines) and NASA.
+The discussion focused on the consequences of the temperature at take-off of 31°F (just below 0°C) for the success of the flight and in particular on the performance of the O-rings used in the engines.
+Indeed, no test had been performed at this temperature.
+</p>
+
+<p>
+The following study takes up some of the analyses carried out that night with the objective of assessing the potential influence of the temperature and pressure to which the O-rings are subjected on their probability of malfunction.
+Our starting point is the results of the experiments carried out by NASA engineers during the six years preceding the launch of the shuttle Challenger.
+</p>
+
+
+<div id="outline-container-org23502fa" class="outline-2">
+<h2 id="org23502fa"><span class="section-number-2">1</span> Loading the data</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We start by loading this data:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #F92672;">import</span> numpy <span style="color: #F92672;">as</span> np
+<span style="color: #F92672;">import</span> pandas <span style="color: #F92672;">as</span> pd
+
+<span style="color: #FD971F;">data</span> = pd.read_csv<span style="color: #AE81FF;">(</span><span style="color: #E6DB74;">"shuttle.csv"</span><span style="color: #AE81FF;">)</span>
+data
+</pre>
+</div>
+
+<pre class="example">
+         Date  Count  Temperature  Pressure  Malfunction
+0     4/12/81      6           66        50            0
+1    11/12/81      6           70        50            1
+2     3/22/82      6           69        50            0
+3    11/11/82      6           68        50            0
+4     4/04/83      6           67        50            0
+5     6/18/82      6           72        50            0
+6     8/30/83      6           73       100            0
+7    11/28/83      6           70       100            0
+8     2/03/84      6           57       200            1
+9     4/06/84      6           63       200            1
+10    8/30/84      6           70       200            1
+11   10/05/84      6           78       200            0
+12   11/08/84      6           67       200            0
+13    1/24/85      6           53       200            2
+14    4/12/85      6           67       200            0
+15    4/29/85      6           75       200            0
+16    6/17/85      6           70       200            0
+17  7/2903/85      6           81       200            0
+18    8/27/85      6           76       200            0
+19   10/03/85      6           79       200            0
+20   10/30/85      6           75       200            2
+21   11/26/85      6           76       200            0
+22    1/12/86      6           58       200            1
+</pre>
+
+<p>
+The data set shows us the date of each test, the number of O-rings (there are 6 on the main launcher), the temperature (in Fahrenheit) and pressure (in psi), and finally the number of identified malfunctions.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgc1da573" class="outline-2">
+<h2 id="orgc1da573"><span class="section-number-2">2</span> Graphical inspection</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Flights without incidents do not provide any information on the influence of temperature or pressure on malfunction.
+We thus focus on the experiments in which at least one O-ring was defective.
+<b>Excluding all non-defective experiments was a mistake</b>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #FD971F;">undata</span> = data<span style="color: #AE81FF;">[</span>data.Malfunction &gt; <span style="color: #AE81FF;">0</span><span style="color: #AE81FF;">]</span>
+undata
+</pre>
+</div>
+
+<pre class="example">
+        Date  Count  Temperature  Pressure  Malfunction
+1   11/12/81      6           70        50            1
+8    2/03/84      6           57       200            1
+9    4/06/84      6           63       200            1
+10   8/30/84      6           70       200            1
+13   1/24/85      6           53       200            2
+20  10/30/85      6           75       200            2
+22   1/12/86      6           58       200            1
+</pre>
+
+
+<p>
+We have a high temperature variability but the pressure is almost always 200, which should simplify the analysis.
+</p>
+
+<p>
+How does the frequency of failure vary with temperature?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #F92672;">import</span> matplotlib.pyplot <span style="color: #F92672;">as</span> plt
+
+plt.clf<span style="color: #AE81FF;">()</span>
+<span style="color: #FD971F;">data</span><span style="color: #AE81FF;">[</span><span style="color: #E6DB74;">"Frequency"</span><span style="color: #AE81FF;">]</span> = data.Malfunction / data.Count
+data.plot<span style="color: #AE81FF;">(</span>x=<span style="color: #E6DB74;">"Temperature"</span>, y=<span style="color: #E6DB74;">"Frequency"</span>, kind=<span style="color: #E6DB74;">'scatter'</span>, ylim=<span style="color: #66D9EF;">[</span><span style="color: #AE81FF;">0</span>,<span style="color: #AE81FF;">1</span><span style="color: #66D9EF;">]</span><span style="color: #AE81FF;">)</span>
+plt.grid<span style="color: #AE81FF;">(</span><span style="color: #AE81FF;">True</span><span style="color: #AE81FF;">)</span>
+
+plt.savefig<span style="color: #AE81FF;">(</span>matplot_lib_filename<span style="color: #AE81FF;">)</span>
+<span style="color: #F92672;">print</span><span style="color: #AE81FF;">(</span>matplot_lib_filename<span style="color: #AE81FF;">)</span>
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="freq_temp_python.png" alt="freq_temp_python.png" />
+</p>
+</div>
+
+<p>
+At first glance, the dependence does not look very important, but let's try to estimate the impact of temperature \(t\) on the probability of O-ring malfunction.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgf315110" class="outline-2">
+<h2 id="orgf315110"><span class="section-number-2">3</span> Estimation of the temperature influence</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Suppose that each of the six O-rings is damaged with the same probability and independently of the others and that this probability depends only on the temperature.
+If \(p(t)\) is this probability, the number \(D\) of malfunctioning O-rings during a flight at temperature \(t\) follows a binomial law with parameters \(n=6\) and \(p=p(t)\).
+To link \(p(t)\) to \(t\), we will therefore perform a logistic regression.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #F92672;">import</span> statsmodels.api <span style="color: #F92672;">as</span> sm
+
+<span style="color: #FD971F;">data</span><span style="color: #AE81FF;">[</span><span style="color: #E6DB74;">'Intercept'</span><span style="color: #AE81FF;">]</span> = <span style="color: #AE81FF;">1</span>
+<span style="color: #FD971F;">logmodel</span> = sm.GLM<span style="color: #AE81FF;">(</span>data<span style="color: #66D9EF;">[</span><span style="color: #E6DB74;">'Frequency'</span><span style="color: #66D9EF;">]</span>, data<span style="color: #66D9EF;">[</span><span style="color: #A6E22E;">[</span><span style="color: #E6DB74;">'Intercept'</span>,<span style="color: #E6DB74;">'Temperature'</span><span style="color: #A6E22E;">]</span><span style="color: #66D9EF;">]</span>,
+                  family=sm.families.Binomial<span style="color: #66D9EF;">(</span>sm.families.links.logit<span style="color: #66D9EF;">)</span><span style="color: #AE81FF;">)</span>.fit<span style="color: #AE81FF;">()</span>
+logmodel.summary<span style="color: #AE81FF;">()</span>
+</pre>
+</div>
+
+<pre class="example">
+                 Generalized Linear Model Regression Results
+==============================================================================
+Dep. Variable:              Frequency   No. Observations:                   23
+Model:                            GLM   Df Residuals:                       21
+Model Family:                Binomial   Df Model:                            1
+Link Function:                  logit   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -3.9210
+Date:                Thu, 30 May 2019   Deviance:                       3.0144
+Time:                        00:21:42   Pearson chi2:                     5.00
+No. Iterations:                     6   Covariance Type:             nonrobust
+===============================================================================
+                  coef    std err          z      P&gt;|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+Intercept       5.0850      7.477      0.680      0.496      -9.570      19.740
+Temperature    -0.1156      0.115     -1.004      0.316      -0.341       0.110
+===============================================================================
+</pre>
+
+<p>
+The most likely estimator of the temperature parameter is 0.0014 and the standard error of this estimator is 0.122, in other words we cannot distinguish any particular impact and we must take our estimates with caution.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgde94094" class="outline-2">
+<h2 id="orgde94094"><span class="section-number-2">4</span> Estimation of the probability of O-ring malfunction</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The expected temperature on the take-off day is 31°F.
+Let's try toestimate the probability of O-ring malfunction at this temperature from the model we just built:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #F92672;">import</span> matplotlib.pyplot <span style="color: #F92672;">as</span> plt
+
+<span style="color: #FD971F;">data_pred</span> = pd.DataFrame<span style="color: #AE81FF;">(</span><span style="color: #66D9EF;">{</span><span style="color: #E6DB74;">"Temperature"</span>: np.linspace<span style="color: #A6E22E;">(</span>start=<span style="color: #AE81FF;">30</span>, stop=<span style="color: #AE81FF;">90</span>, num=<span style="color: #AE81FF;">121</span><span style="color: #A6E22E;">)</span>, <span style="color: #E6DB74;">"Intercept"</span>: <span style="color: #AE81FF;">1</span><span style="color: #66D9EF;">}</span><span style="color: #AE81FF;">)</span>
+<span style="color: #FD971F;">data_pred</span><span style="color: #AE81FF;">[</span><span style="color: #E6DB74;">"Frequency"</span><span style="color: #AE81FF;">]</span> = logmodel.predict<span style="color: #AE81FF;">(</span>data_pred<span style="color: #66D9EF;">[</span><span style="color: #A6E22E;">[</span><span style="color: #E6DB74;">"Intercept"</span>, <span style="color: #E6DB74;">"Temperature"</span><span style="color: #A6E22E;">]</span><span style="color: #66D9EF;">]</span><span style="color: #AE81FF;">)</span>
+data_pred.plot<span style="color: #AE81FF;">(</span>x=<span style="color: #E6DB74;">"Temperature"</span>, y=<span style="color: #E6DB74;">"Frequency"</span>, kind=<span style="color: #E6DB74;">'line'</span>, ylim=<span style="color: #66D9EF;">[</span><span style="color: #AE81FF;">0</span>,<span style="color: #AE81FF;">1</span><span style="color: #66D9EF;">]</span><span style="color: #AE81FF;">)</span>
+plt.scatter<span style="color: #AE81FF;">(</span>x=data<span style="color: #66D9EF;">[</span><span style="color: #E6DB74;">"Temperature"</span><span style="color: #66D9EF;">]</span>, y=data<span style="color: #66D9EF;">[</span><span style="color: #E6DB74;">"Frequency"</span><span style="color: #66D9EF;">]</span><span style="color: #AE81FF;">)</span>
+plt.grid<span style="color: #AE81FF;">(</span><span style="color: #AE81FF;">True</span><span style="color: #AE81FF;">)</span>
+
+plt.savefig<span style="color: #AE81FF;">(</span>matplot_lib_filename<span style="color: #AE81FF;">)</span>
+<span style="color: #F92672;">print</span><span style="color: #AE81FF;">(</span>matplot_lib_filename<span style="color: #AE81FF;">)</span>
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="proba_estimate_python.png" alt="proba_estimate_python.png" />
+</p>
+</div>
+
+<p>
+As expected from the initial data, the temperature has no significant impact on the probability of failure of the O-rings.
+<i>It will be about 0.2, as in the tests where we had a failure of at least one joint.</i>
+<b>When the whole dataset is considered, it is clear that the model predicts a higher chance of failure at lower temperatures.</b>
+Let's get back to the initial dataset to estimate the probability of failure:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #FD971F;">data</span> = pd.read_csv<span style="color: #AE81FF;">(</span><span style="color: #E6DB74;">"shuttle.csv"</span><span style="color: #AE81FF;">)</span>
+np.<span style="color: #F92672;">sum</span><span style="color: #AE81FF;">(</span>data.Malfunction<span style="color: #AE81FF;">)</span> / np.<span style="color: #F92672;">sum</span><span style="color: #AE81FF;">(</span>data.Count<span style="color: #AE81FF;">)</span>
+</pre>
+</div>
+
+<pre class="example">
+0.06521739130434782
+</pre>
+
+
+<p>
+This probability is thus about \(p=0.065\).
+Knowing that there is a primary and a secondary O-ring on each of the three parts of the launcher, the probability of failure of both joints of a launcher is \(p^2 \approx 0.00425\).
+The probability of failure of any one of the launchers is \(1-(1-p^2)^3 \approx 1.2%\).
+</p>
+
+<p>
+<i>Thus, everything is under control, so the takeoff can happen tomorrow as planned.</i>
+But the next day, the Challenger shuttle exploded and took away with her the seven crew members.
+The public was shocked and in the subsequent investigation, the reliability of the O-rings was questioned.
+Beyond the internal communication problems of NASA, which have a lot to do with this fiasco, the previous analysis includes (at least) a small problem&#x2026;
+Can you find it?
+You are free to modify this analysis and to look at this dataset from all angles in order to to explain what's wrong.
+<b>See bold lines explaining the problems in the analysis.</b>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Arnaud Legrand, Gabriel B. Sant'Anna</p>
+<p class="date">Created: 2019-05-30 Thu 00:21</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
