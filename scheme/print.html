@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>(Matematica (Funcional (Scheme)))</title>
+        
+        <meta name="robots" content="noindex" />
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Oficina de Matemática Funcional em Scheme da SECCOM UFSC 2019.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="1_description.html"><strong aria-hidden="true">1.</strong> Sobre o Minicurso</a></li><li><a href="0_construction.html"><strong aria-hidden="true">2.</strong> Conteúdo</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">(Matematica (Funcional (Scheme)))</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#sobre-o-minicurso" id="sobre-o-minicurso">Sobre o Minicurso</a></h1>
+<h2><a class="header" href="#datas-e-horários" id="datas-e-horários">Datas e horários</a></h2>
+<blockquote>
+<ul>
+<li>1º Dia <br/>
+<strong>02 de Outubro, Quarta-feira</strong> <br/>
+Horário: <strong>10h10 às 12h00</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>2º Dia <br/>
+<strong>03 de Outubro, Quinta-feira</strong> <br/>
+Horário: <strong>10h10 às 12h00</strong></li>
+</ul>
+</blockquote>
+<h2><a class="header" href="#como-participar" id="como-participar">Como participar</a></h2>
+<p>Confira as datas e horários das <a href="https://seccom-ufsc.github.io/2019/#Oficinas">oficinas da SECCOM</a>. <br/>
+Faça a sua <a href="https://docs.google.com/forms/d/e/1FAIpQLScaSQj9MBJJsgE77ef11SWf10cuyUUajxt0GeZkRkNghr4JZQ/viewform"><strong>inscrição</strong></a>.</p>
+<h2><a class="header" href="#resumo" id="resumo">Resumo</a></h2>
+<p>Scheme é um dos principais &quot;dialetos&quot; de <a href="https://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>, que adere ao paradigma funcional e é a <strong>segunda linguagem de programação mais antiga ainda amplamente utilizada</strong>.
+Devido à sua flexibilidade e simplicidade, Scheme é usada para extender e customizar o comportamento de outros softwares e foi adotada como <a href="https://www.gnu.org/software/guile/">a linguagem de scripting oficial do GNU Project</a>.</p>
+<h2><a class="header" href="#conteúdos-explorados" id="conteúdos-explorados">Conteúdos explorados</a></h2>
+<p>O minicurso abordará algumas <strong>técnicas de programação funcional</strong> em Scheme para algoritmos matemáticos e métodos numéricos, incluindo:</p>
+<ul>
+<li><strong>Tipos de recursão e <em>tail call optimization</em></strong></li>
+<li><strong>Abstração com funções de alta ordem e <em>closures</em></strong></li>
+<li><strong>Paradigma de fluxo de dados (<em>streams</em>): ao infinito e além com <em>lazy evaluation</em></strong></li>
+<li><strong>Processamento simbólico e metalinguagem</strong></li>
+</ul>
+<p>É necessário conhecimento prévio de programação, não necessariamente do paradigma funcional.</p>
+<h2><a class="header" href="#ferramentas-utilizadas" id="ferramentas-utilizadas">Ferramentas utilizadas</a></h2>
+<p><a href="(https://cisco.github.io/ChezScheme/)">Chez Scheme</a>  (preferência pessoal) ou <a href="https://www.gnu.org/software/guile/">GNU Guile</a> (disponível na ISO do PET Computação) em ambiente Linux.</p>
+<h2><a class="header" href="#bibliografia" id="bibliografia">Bibliografia</a></h2>
+<ul>
+<li><a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html">Abelson H., Sussman G. J.; <strong>&quot;The Wizard Book&quot; - Structure and Interpretation of Computer Programs</strong></a>
+<ul>
+<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/">MIT OpenCourseWare 6.001</a></li>
+</ul>
+</li>
+<li><a href="https://www.scheme.com/tspl4/">Dybvig R. K.; <strong>The Scheme Programming Language</strong></a></li>
+<li><a href="https://ds26gte.github.io/tyscheme/">Sitaram D.; <strong>Teach Yourself Scheme in Fixnum Days</strong></a></li>
+<li><a href="https://htdp.org/2019-02-24/">Felleisen M., Findler R. B., Flatt M., Krishnamurthi S.; <strong>How to Design Programs</strong></a></li>
+</ul>
+<h1><a class="header" href="#em-construção" id="em-construção">Em construção</a></h1>
+<p><img src="https://http.cat/204" alt="http.cat" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
+        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
+        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            MathJax.Hub.Register.StartupHook('End', function() {
+                window.setTimeout(window.print, 100);
+            });
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
