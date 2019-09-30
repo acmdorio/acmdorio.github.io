@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Sobre o Minicurso - (Matematica (Funcional (Scheme)))</title>
+        <title>Sobre a Oficina - (Matematica (Funcional (Scheme)))</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -35,11 +35,11 @@
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         
     </head>
-    <body class="light">
+    <body class="rust">
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = "light";
+            var default_theme = "rust";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="1_description.html"><strong aria-hidden="true">1.</strong> Sobre o Minicurso</a></li><li><a href="0_construction.html"><strong aria-hidden="true">2.</strong> Conteúdo</a></li></ol>
+                <ol class="chapter"><li class="affix"><a href="about.html">Sobre a Oficina</a></li><li class="affix"><a href="discussion.html">Comentários</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -100,8 +100,8 @@
                                 <i class="fa fa-paint-brush"></i>
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
@@ -148,8 +148,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#sobre-o-minicurso" id="sobre-o-minicurso">Sobre o Minicurso</a></h1>
-<h2><a class="header" href="#datas-e-horários" id="datas-e-horários">Datas e horários</a></h2>
+                        <h1><a class="header" href="#matemática-funcional-em-scheme" id="matemática-funcional-em-scheme">Matemática Funcional em Scheme</a></h1>
+<h2><a class="header" href="#cronograma" id="cronograma">Cronograma</a></h2>
 <blockquote>
 <ul>
 <li>1º Dia <br/>
@@ -171,26 +171,25 @@ Faça a sua <a href="https://docs.google.com/forms/d/e/1FAIpQLScaSQj9MBJJsgE77ef
 <p>Scheme é um dos principais &quot;dialetos&quot; de <a href="https://en.wikipedia.org/wiki/Lisp_programming_language">Lisp</a>, que adere ao paradigma funcional e é a <strong>segunda linguagem de programação mais antiga ainda amplamente utilizada</strong>.
 Devido à sua flexibilidade e simplicidade, Scheme é usada para extender e customizar o comportamento de outros softwares e foi adotada como <a href="https://www.gnu.org/software/guile/">a linguagem de scripting oficial do GNU Project</a>.</p>
 <h2><a class="header" href="#conteúdos-explorados" id="conteúdos-explorados">Conteúdos explorados</a></h2>
-<p>O minicurso abordará algumas <strong>técnicas de programação funcional</strong> em Scheme para algoritmos matemáticos e métodos numéricos, incluindo:</p>
+<p>O oficina abordará algumas <strong>técnicas de programação funcional</strong> em Scheme para algoritmos matemáticos e métodos numéricos, incluindo:</p>
 <ul>
 <li><strong>Tipos de recursão e <em>tail call optimization</em></strong></li>
 <li><strong>Abstração com funções de alta ordem e <em>closures</em></strong></li>
 <li><strong>Paradigma de fluxo de dados (<em>streams</em>): ao infinito e além com <em>lazy evaluation</em></strong></li>
 <li><strong>Processamento simbólico e metalinguagem</strong></li>
 </ul>
-<p>É necessário conhecimento prévio de programação, não necessariamente do paradigma funcional.</p>
+<p>É necessário conhecimento prévio de programação, não necessariamente do paradigma funcional.
+Noções de Matemática Discreta e Cálculo Numérico são recomendadas mas não obrigatórias.</p>
 <h2><a class="header" href="#ferramentas-utilizadas" id="ferramentas-utilizadas">Ferramentas utilizadas</a></h2>
-<p><a href="https://cisco.github.io/ChezScheme/">Chez Scheme</a>  (preferência pessoal) ou <a href="https://www.gnu.org/software/guile/">GNU Guile</a> (disponível na ISO do PET Computação) em ambiente Linux.</p>
+<p><a href="https://cisco.github.io/ChezScheme/">Chez Scheme</a> (preferência pessoal) ou <a href="https://www.gnu.org/software/guile/">GNU Guile</a> (disponível na ISO do PET Computação) em ambiente Linux.</p>
 <h2><a class="header" href="#bibliografia" id="bibliografia">Bibliografia</a></h2>
+<p><img src="http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/wizard.jpg" alt="The Wizard Book" /></p>
 <ul>
-<li><a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html">Abelson H., Sussman G. J.; <strong>&quot;The Wizard Book&quot; - Structure and Interpretation of Computer Programs</strong></a>
-<ul>
-<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/">MIT OpenCourseWare 6.001</a></li>
-</ul>
-</li>
-<li><a href="https://www.scheme.com/tspl4/">Dybvig R. K.; <strong>The Scheme Programming Language</strong></a></li>
-<li><a href="https://ds26gte.github.io/tyscheme/">Sitaram D.; <strong>Teach Yourself Scheme in Fixnum Days</strong></a></li>
-<li><a href="https://htdp.org/2019-02-24/">Felleisen M., Findler R. B., Flatt M., Krishnamurthi S.; <strong>How to Design Programs</strong></a></li>
+<li><a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html"><strong>Structure and Interpretation of Computer Programs (SICP, &quot;The Wizard Book&quot;)</strong> - Abelson H., Sussman G. J.</a></li>
+<li><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/"><strong>MIT OpenCourseWare 6.001 SICP lectures</strong> - Abelson H., Sussman G. J.</a></li>
+<li><a href="https://www.scheme.com/tspl4/"><strong>The Scheme Programming Language</strong> - Dybvig R. K.</a></li>
+<li><a href="https://ds26gte.github.io/tyscheme/"><strong>Teach Yourself Scheme in Fixnum Days</strong> - Sitaram D.</a></li>
+<li><a href="https://htdp.org/2019-02-24/"><strong>How to Design Programs</strong> - Felleisen M., Findler R. B., Flatt M., Krishnamurthi S.</a></li>
 </ul>
 
                     </main>
@@ -218,12 +217,6 @@ Devido à sua flexibilidade e simplicidade, Scheme é usada para extender e cust
 
         
 
-        
-        <script src="ace.js" type="text/javascript" charset="utf-8"></script>
-        <script src="editor.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mode-rust.js" type="text/javascript" charset="utf-8"></script>
-        <script src="theme-dawn.js" type="text/javascript" charset="utf-8"></script>
-        <script src="theme-tomorrow_night.js" type="text/javascript" charset="utf-8"></script>
         
 
         
