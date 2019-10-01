@@ -3,8 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Comentarios - (Matematica (Funcional (Scheme)))</title>
-
+        <title>Finale - (Matematica (Funcional (Scheme)))</title>
+        
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Oficina de Matemática Funcional em Scheme da SECCOM UFSC 2019.">
@@ -28,18 +28,18 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        
 
-
-
+        
         <!-- MathJax -->
         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
+        
     </head>
-    <body class="rust">
+    <body class="navy">
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = "rust";
+            var default_theme = "navy";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="affix"><a href="about.html">Sobre a Oficina</a></li><li class="affix"><a href="discussion.html" class="active">Comentarios</a></li></ol>
+                <ol class="chapter"><li><a href="about.html"><strong aria-hidden="true">1.</strong> Sobre a Oficina</a></li><li><ol class="section"><li><a href="bib.html"><strong aria-hidden="true">1.1.</strong> Bibliografia</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">2.</strong> Computando com Scheme</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">2.1.</strong> Sobre Linguagens</a></li><li><a href="204.html"><strong aria-hidden="true">2.2.</strong> Introdução à Scheme</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">3.</strong> Repetição via Recursão</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">3.1.</strong> Recursão Linear</a></li><li><a href="204.html"><strong aria-hidden="true">3.2.</strong> Tail-Recursion</a></li><li><a href="204.html"><strong aria-hidden="true">3.3.</strong> Linearização</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">4.</strong> Abstração Funcional</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">4.1.</strong> Potenciação Rápida</a></li><li><a href="204.html"><strong aria-hidden="true">4.2.</strong> Pontos Fixos</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">5.</strong> Sistemas Computacionais</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">5.1.</strong> Memoization com Closures</a></li><li><a href="204.html"><strong aria-hidden="true">5.2.</strong> Objetos Dinâmicos</a></li><li><a href="204.html"><strong aria-hidden="true">5.3.</strong> Lazy Streams no Infinito</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">6.</strong> Abstração Metalinguística</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">6.1.</strong> Processamento Simbólico</a></li><li><a href="204.html"><strong aria-hidden="true">6.2.</strong> Diferenciação Analítica</a></li></ol></li><li><a href="discussion.html" class="active"><strong aria-hidden="true">7.</strong> Finale</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -89,7 +89,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-
+                
                 <div id="menu-bar" class="menu-bar">
                     <div id="menu-bar-sticky-container">
                         <div class="left-buttons">
@@ -101,16 +101,16 @@
                             </button>
                             <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
                                 <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                             </ul>
-
+                            
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search"></i>
                             </button>
-
+                            
                         </div>
 
                         <h1 class="menu-title">(Matematica (Funcional (Scheme)))</h1>
@@ -119,12 +119,12 @@
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
-
+                            
                         </div>
                     </div>
                 </div>
 
-
+                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
                         <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
@@ -135,7 +135,7 @@
                         </ul>
                     </div>
                 </div>
-
+                
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
                 <script type="text/javascript">
@@ -148,36 +148,46 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h3><a class="header" href="#em-construção" id="em-construção">Em construção</a></h3>
-                        <p><img src="https://http.cat/204" alt="http.cat" /></p>
+                        <!-- # Esse é o fim
 
-                        <div id="disqus_thread"></div>
-                        <script>
-                            /** https://disqus.com/admin/universalcode/#configuration-variables */
-                            var disqus_config = function () {
-                                this.page.url = 'https://baioc.github.io/scheme/discussion.html'; // Replace PAGE_URL with your page's canonical URL variable
-                                this.page.identifier = '{{content_id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                            };
-                            (function() { // DON'T EDIT BELOW THIS LINE
-                                var d = document, s = d.createElement('script');
-                                s.src = 'https://baioc.disqus.com/embed.js';
-                                s.setAttribute('data-timestamp', +new Date());
-                                (d.head || d.body).appendChild(s);
-                            })();
-                        </script>
-                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+## Agradecimentos
+
+![Grand Wizard GJ Sussman](./img/sussman.png)
+![Grand Wizard H Abelson](./img/abelson.png)
+
+## Scripts Anexos
+
+Os trechos de código utilizados na oficina podem ser encontrados no meu [repositório do GitHub](https://github.com/baioc/baioc.github.io/tree/master/seccom-scheme/src/scm). -->
+<h2><a class="header" href="#discussão-e-comentários" id="discussão-e-comentários">Discussão e Comentários</a></h2>
+<p>Podem utilizar o espaço abaixo para tirar dúvidas e discutir implementações, assim como apontar quaisquer erros no conteúdo.</p>
+<p>Sinta-se também à vontade para deixar sua opinião sobre a oficina, elogiando ou criticando de forma construtiva.</p>
+<div id="disqus_thread"></div>
+<script>
+    /** https://disqus.com/admin/universalcode/#configuration-variables */
+    var disqus_config = function () {
+        this.page.url = 'https://baioc.github.io/scheme/discussion.html'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{content_id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://baioc.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-
-                            <a rel="prev" href="about.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        
+                            <a rel="prev" href="204.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
+                        
 
-
-
+                        
 
                         <div style="clear: both"></div>
                     </nav>
@@ -185,37 +195,37 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-
-                    <a href="about.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                
+                    <a href="204.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
+                
 
-
-
+                
             </nav>
 
         </div>
 
+        
 
+        
 
+        
 
-
-
-
-
+        
         <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-
+        
 
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
 
-
-
+        
 
     </body>
 </html>
