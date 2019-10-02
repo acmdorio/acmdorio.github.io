@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Bibliografia - ((Functional (Scheme)) Maths)</title>
+        <title>Tail-Recursion - ((Functional (Scheme)) Maths)</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="about.html"><strong aria-hidden="true">1.</strong> Sobre a Oficina</a></li><li><ol class="section"><li><a href="bib.html" class="active"><strong aria-hidden="true">1.1.</strong> Bibliografia</a></li></ol></li><li><a href="intro.html"><strong aria-hidden="true">2.</strong> Computando com Scheme</a></li><li><ol class="section"><li><a href="lang.html"><strong aria-hidden="true">2.1.</strong> Sobre Linguagens</a></li><li><a href="eg.html"><strong aria-hidden="true">2.2.</strong> Introdução à Scheme</a></li></ol></li><li><a href="recursion.html"><strong aria-hidden="true">3.</strong> Repetição via Recursão</a></li><li><ol class="section"><li><a href="rec.html"><strong aria-hidden="true">3.1.</strong> Recursão Linear</a></li><li><a href="iter.html"><strong aria-hidden="true">3.2.</strong> Tail-Recursion</a></li><li><a href="lin.html"><strong aria-hidden="true">3.3.</strong> Linearização</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">4.</strong> Abstração Funcional</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">4.1.</strong> Potenciação Rápida</a></li><li><a href="204.html"><strong aria-hidden="true">4.2.</strong> Pontos Fixos</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">5.</strong> Sistemas Computacionais</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">5.1.</strong> Memoization com Closures</a></li><li><a href="204.html"><strong aria-hidden="true">5.2.</strong> Objetos Dinâmicos</a></li><li><a href="204.html"><strong aria-hidden="true">5.3.</strong> Lazy Streams no Infinito</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">6.</strong> Abstração Metalinguística</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">6.1.</strong> Processamento Simbólico</a></li><li><a href="204.html"><strong aria-hidden="true">6.2.</strong> Diferenciação Analítica</a></li></ol></li><li><a href="discussion.html"><strong aria-hidden="true">7.</strong> Finale</a></li></ol>
+                <ol class="chapter"><li><a href="about.html"><strong aria-hidden="true">1.</strong> Sobre a Oficina</a></li><li><ol class="section"><li><a href="bib.html"><strong aria-hidden="true">1.1.</strong> Bibliografia</a></li></ol></li><li><a href="intro.html"><strong aria-hidden="true">2.</strong> Computando com Scheme</a></li><li><ol class="section"><li><a href="lang.html"><strong aria-hidden="true">2.1.</strong> Sobre Linguagens</a></li><li><a href="eg.html"><strong aria-hidden="true">2.2.</strong> Introdução à Scheme</a></li></ol></li><li><a href="recursion.html"><strong aria-hidden="true">3.</strong> Repetição via Recursão</a></li><li><ol class="section"><li><a href="rec.html"><strong aria-hidden="true">3.1.</strong> Recursão Linear</a></li><li><a href="iter.html" class="active"><strong aria-hidden="true">3.2.</strong> Tail-Recursion</a></li><li><a href="lin.html"><strong aria-hidden="true">3.3.</strong> Linearização</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">4.</strong> Abstração Funcional</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">4.1.</strong> Potenciação Rápida</a></li><li><a href="204.html"><strong aria-hidden="true">4.2.</strong> Pontos Fixos</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">5.</strong> Sistemas Computacionais</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">5.1.</strong> Memoization com Closures</a></li><li><a href="204.html"><strong aria-hidden="true">5.2.</strong> Objetos Dinâmicos</a></li><li><a href="204.html"><strong aria-hidden="true">5.3.</strong> Lazy Streams no Infinito</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">6.</strong> Abstração Metalinguística</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">6.1.</strong> Processamento Simbólico</a></li><li><a href="204.html"><strong aria-hidden="true">6.2.</strong> Diferenciação Analítica</a></li></ol></li><li><a href="discussion.html"><strong aria-hidden="true">7.</strong> Finale</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -148,38 +148,39 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2><a class="header" href="#bibliografia" id="bibliografia">Bibliografia</a></h2>
-<p><img src="http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/wizard.jpg" alt="The Wizard Book" /></p>
-<ul>
-<li>
-<p><a href="https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html"><strong>Structure and Interpretation of Computer Programs <br/> (SICP, a.k.a. &quot;The Wizard Book&quot;)</strong> <br/> - Abelson H., Sussman G. J.</a></p>
-</li>
-<li>
-<p><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video-lectures/"><strong>MIT OpenCourseWare 6.001 SICP lectures</strong> <br/> - Abelson H., Sussman G. J.</a></p>
-</li>
-<li>
-<p><a href="https://www.scheme.com/tspl4/"><strong>The Scheme Programming Language</strong> <br/> - Dybvig R. K.</a></p>
-</li>
-<li>
-<p><a href="https://ds26gte.github.io/tyscheme/"><strong>Teach Yourself Scheme in Fixnum Days</strong> <br/> - Sitaram D.</a></p>
-</li>
-<li>
-<p><a href="https://htdp.org/2019-02-24/"><strong>How to Design Programs</strong> <br/> - Felleisen M., Findler R. B., Flatt M., Krishnamurthi S.</a></p>
-</li>
-</ul>
+                        <h2><a class="header" href="#recursão-iterativa-tail-recursion" id="recursão-iterativa-tail-recursion">Recursão Iterativa: <em>Tail-Recursion</em></a></h2>
+<p>Um outro exemplo de procedimento recursivo é o algoritmo de Euclides:</p>
+<pre><code class="language-scheme">(define (gcd a b)
+  (if (= b 0) a
+      (gcd b (modulo a b))))
+</code></pre>
+<p>Compare o processo gerado com o anterior.</p>
+<pre><code class="language-scheme">(gcd 1071 462)
+(gcd 462 147)
+(gcd 147 21)
+(gcd 21 0)
+21
+</code></pre>
+<p>Perceba que no caso do <code>gcd</code>, a computação não exige o armazenamento do contexto antes das chamadas recursivas: <strong>toda a informação necessária encontra-se nos argumentos da função</strong>.</p>
+<p>Ambos os procedimentos denotam <strong>recursões lineares</strong>, ou seja, onde a invocação da função ocorre uma única vez durante a sua avaliação.
+Entretanto, enquanto <code>fac</code> toma uma quantidade de memória proporcional ao argumento de entrada, o processo descrito por <code>gcd</code> exige espaço constante e portanto constitui ainda uma <strong>iteração linear</strong>.</p>
+<p>O que diferencia os dois procedimentos é o fato de que a última expressão no corpo de <code>gcd</code> é a invocação de uma função.
+Quando isso acontece dizemos que a função possui uma <a href="https://en.wikipedia.org/wiki/Tail_call"><em>tail-call</em></a> (chamada de cauda ou terminal) e quando a função evocada é recursiva, dizemos que ela é <em><strong>tail-recursive</strong></em>.
+Esse fenômeno possibilida a aplicação da chamada <em>Tail Call Optimization</em>, que elimina a necessidade de ocupar espaço na pilha de execução do programa.</p>
+<p>A especificação da linguagem Scheme exige que implementações sejam <a href="http://people.csail.mit.edu/jaffer/r5rs/Proper-tail-recursion.html"><em>properly tail-recursive</em></a>, o que significa que o número de execuções de funções em <em>tail-calls</em> sequenciais é <strong>ilimitado</strong>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="about.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="rec.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="lin.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -191,13 +192,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="about.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="rec.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="lin.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

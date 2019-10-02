@@ -3,11 +3,11 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Finale - (Matematica (Funcional (Scheme)))</title>
+        <title>Finale - ((Functional (Scheme)) Maths)</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Oficina de Matemática Funcional em Scheme da SECCOM UFSC 2019.">
+        <meta name="description" content="Oficina de Matemática Funcional em Scheme da SECCOM UFSC 2019">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
@@ -81,7 +81,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="about.html"><strong aria-hidden="true">1.</strong> Sobre a Oficina</a></li><li><ol class="section"><li><a href="bib.html"><strong aria-hidden="true">1.1.</strong> Bibliografia</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">2.</strong> Computando com Scheme</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">2.1.</strong> Sobre Linguagens</a></li><li><a href="204.html"><strong aria-hidden="true">2.2.</strong> Introdução à Scheme</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">3.</strong> Repetição via Recursão</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">3.1.</strong> Recursão Linear</a></li><li><a href="204.html"><strong aria-hidden="true">3.2.</strong> Tail-Recursion</a></li><li><a href="204.html"><strong aria-hidden="true">3.3.</strong> Linearização</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">4.</strong> Abstração Funcional</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">4.1.</strong> Potenciação Rápida</a></li><li><a href="204.html"><strong aria-hidden="true">4.2.</strong> Pontos Fixos</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">5.</strong> Sistemas Computacionais</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">5.1.</strong> Memoization com Closures</a></li><li><a href="204.html"><strong aria-hidden="true">5.2.</strong> Objetos Dinâmicos</a></li><li><a href="204.html"><strong aria-hidden="true">5.3.</strong> Lazy Streams no Infinito</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">6.</strong> Abstração Metalinguística</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">6.1.</strong> Processamento Simbólico</a></li><li><a href="204.html"><strong aria-hidden="true">6.2.</strong> Diferenciação Analítica</a></li></ol></li><li><a href="discussion.html" class="active"><strong aria-hidden="true">7.</strong> Finale</a></li></ol>
+                <ol class="chapter"><li><a href="about.html"><strong aria-hidden="true">1.</strong> Sobre a Oficina</a></li><li><ol class="section"><li><a href="bib.html"><strong aria-hidden="true">1.1.</strong> Bibliografia</a></li></ol></li><li><a href="intro.html"><strong aria-hidden="true">2.</strong> Computando com Scheme</a></li><li><ol class="section"><li><a href="lang.html"><strong aria-hidden="true">2.1.</strong> Sobre Linguagens</a></li><li><a href="eg.html"><strong aria-hidden="true">2.2.</strong> Introdução à Scheme</a></li></ol></li><li><a href="recursion.html"><strong aria-hidden="true">3.</strong> Repetição via Recursão</a></li><li><ol class="section"><li><a href="rec.html"><strong aria-hidden="true">3.1.</strong> Recursão Linear</a></li><li><a href="iter.html"><strong aria-hidden="true">3.2.</strong> Tail-Recursion</a></li><li><a href="lin.html"><strong aria-hidden="true">3.3.</strong> Linearização</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">4.</strong> Abstração Funcional</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">4.1.</strong> Potenciação Rápida</a></li><li><a href="204.html"><strong aria-hidden="true">4.2.</strong> Pontos Fixos</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">5.</strong> Sistemas Computacionais</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">5.1.</strong> Memoization com Closures</a></li><li><a href="204.html"><strong aria-hidden="true">5.2.</strong> Objetos Dinâmicos</a></li><li><a href="204.html"><strong aria-hidden="true">5.3.</strong> Lazy Streams no Infinito</a></li></ol></li><li><a href="204.html"><strong aria-hidden="true">6.</strong> Abstração Metalinguística</a></li><li><ol class="section"><li><a href="204.html"><strong aria-hidden="true">6.1.</strong> Processamento Simbólico</a></li><li><a href="204.html"><strong aria-hidden="true">6.2.</strong> Diferenciação Analítica</a></li></ol></li><li><a href="discussion.html" class="active"><strong aria-hidden="true">7.</strong> Finale</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -113,7 +113,7 @@
                             
                         </div>
 
-                        <h1 class="menu-title">(Matematica (Funcional (Scheme)))</h1>
+                        <h1 class="menu-title">((Functional (Scheme)) Maths)</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -149,15 +149,23 @@
                 <div id="content" class="content">
                     <main>
                         <!-- # Esse é o fim
+> Ou talvez seja apenas um início.
+
+Os interessados podem continuar seu aprendizado com os tópicos não abordados nessa oficina mas que também são ferramentas muito úteis presentes em Scheme.
+Para citar algumas:
+
+- [Interpretadores Metacirculares](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-26.html)
+- [Macros Higiênicas](https://en.wikipedia.org/wiki/Hygienic_macro)
+- [Computação Não-Determinística](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-28.html)
+- [*First-class Continuations*](http://community.schemewiki.org/?call-with-current-continuation)
+- [*Threads* e Concorrência](https://www.gnu.org/software/guile/manual/html_node/Threads.html)
 
 ## Agradecimentos
 
 ![Grand Wizard GJ Sussman](./img/sussman.png)
-![Grand Wizard H Abelson](./img/abelson.png)
-
-## Scripts Anexos
-
-Os trechos de código utilizados na oficina podem ser encontrados no meu [repositório do GitHub](https://github.com/baioc/baioc.github.io/tree/master/seccom-scheme/src/scm). -->
+![Grand Wizard H Abelson](./img/abelson.png) -->
+<h2><a class="header" href="#scripts-anexos" id="scripts-anexos">Scripts Anexos</a></h2>
+<p>Os trechos de código utilizados na oficina podem ser encontrados no meu <a href="https://github.com/baioc/baioc.github.io/tree/master/seccom-scheme/src/scm">repositório do GitHub</a>.</p>
 <h2><a class="header" href="#discussão-e-comentários" id="discussão-e-comentários">Discussão e Comentários</a></h2>
 <p>Podem utilizar o espaço abaixo para tirar dúvidas e discutir implementações, assim como apontar quaisquer erros no conteúdo.</p>
 <p>Sinta-se também à vontade para deixar sua opinião sobre a oficina, elogiando ou criticando de forma construtiva.</p>
