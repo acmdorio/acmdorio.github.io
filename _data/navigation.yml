@@ -1,0 +1,7 @@
+main:
+  - title: "Curriculum"
+    url: /cv/
+  - title: "Portfolio"
+    url: /projects/
+  - title: "Blog"
+    url: /blog/
