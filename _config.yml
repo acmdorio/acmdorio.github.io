@@ -24,8 +24,11 @@ minimal_mistakes_skin: "contrast" # "mint", "contrast", "dark", "neon"
 search: true
 search_full_content: true
 
-# This fixes "GitHub Metadata" errors, found at https://github.com/github/pages-gem/issues/399
+# This fixes "GitHub Metadata" errors
+# found at https://github.com/github/pages-gem/issues/399 and also
+# https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration
 github: [metadata]
+repository: baioc/baioc.github.io
 
 # Build settings
 markdown: kramdown
@@ -70,9 +73,6 @@ author:
     Currently studying Video Coding techniques at UFSC's Embedded Computing Laboratory.
   # location: "Florianópolis, Brazil"
   links: # check out icons at https://fontawesome.com/icons/
-    - label: "CV Lattes"
-      icon: "fas fa-eye"
-      url: "http://lattes.cnpq.br/5048826722066095"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/baioc"
@@ -82,6 +82,9 @@ author:
     - label: "Sourcerer"
       icon: "fas fa-hat-wizard"
       url: "https://sourcerer.io/baioc"
+    - label: "CV Lattes"
+      icon: "fas fa-eye"
+      url: "http://lattes.cnpq.br/5048826722066095"
 
 footer:
   # links:
@@ -107,9 +110,19 @@ defaults:
       path: "_pages"
       type: pages
     values:
-      layout: single
+      layout: archive
       author_profile: true
       search: false
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      search: true
+      comments: true
+      related: true
 
 category_archive:
   type: liquid
@@ -117,5 +130,15 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "baioc"
 
 # for more information check out https://mmistakes.github.io/minimal-mistakes/docs/configuration/
