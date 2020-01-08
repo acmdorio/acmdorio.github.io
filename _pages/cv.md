@@ -52,5 +52,5 @@ Awards
 
 Teaching
 ------
-* Workshop: Matemática Funcional em Scheme (2019)
+* Workshop: [Matemática Funcional em Scheme](https://baioc.github.io/scheme) (2019)
   * Semana Acadêmica de Computação e Sistemas (SECCOM UFSC)
