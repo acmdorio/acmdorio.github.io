@@ -37,7 +37,7 @@ Skills
 * Experience using Linux and Git version control software
 * Disciplined and organized, which also apply to code
 * Familiarity with HDLs and Altera Quartus FPGA tools
-* Hability to design, analyse and assemble electronic circuits
+* Ability to design, analyse and assemble electronic circuits
 
 Languages
 ------
