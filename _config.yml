@@ -141,4 +141,7 @@ comments:
   disqus:
     shortname: "baioc"
 
-# for more information check out https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+# for more information check out:
+# Utilities - https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/
+# Helpers - https://mmistakes.github.io/minimal-mistakes/docs/helpers/
+# Jekyll - https://jekyllrb.com/docs/

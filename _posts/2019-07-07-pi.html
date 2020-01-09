@@ -1,0 +1,182 @@
+---
+title: "On the computation of π"
+excerpt: "How to calculate the mathematical constant through 5 different methods"
+header:
+  teaser: /assets/images/pi-square.png
+categories:
+  - blog
+tags:
+  - numerical
+toc: true
+toc_label: "Methods"
+toc_sticky: true
+author_profile: true
+---
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>On the computation of &pi;</title>
+  <meta name="generator" content="Org mode" />
+  <meta name="author" content="Gabriel B. Sant'Anna" />
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                      linebreaks: { automatic: "false" },
+                      webFont: "TeX"},
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"}
+    });
+  </script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML">
+  </script>
+</head>
+
+<body>
+  <div id="content">
+
+    <div id="outline-container-orga7b4068" class="outline-2">
+      <h2 id="orga7b4068"><span class="section-number-2">1</span> Asking the math library</h2>
+      <div class="outline-text-2" id="text-1">
+        <p>My computer tells me that &pi; is <i>approximatively</i></p>
+
+        <div class="org-src-container">
+          <pre class="src src-python"><span style="color: #F92672;">from</span> math <span style="color: #F92672;">import</span> *pi</pre>
+        </div>
+
+        <pre class="example">3.141592653589793</pre>
+      </div>
+    </div>
+
+
+    <div id="outline-container-orgeb0560f" class="outline-2">
+      <h2 id="orgeb0560f"><span class="section-number-2">2</span> Buffon's needle</h2>
+      <div class="outline-text-2" id="text-2">
+        <p>
+          By the method of <a href="http://www.cut-the-knot.org/fta/Buffon/buffon9.shtml">Buffon's needle</a> we
+          get the <b>approximation</b>
+        </p>
+
+        <div class="org-src-container">
+          <pre class="src src-python"><span style="color: #F92672;">import</span> numpy <span style="color: #F92672;">as</span> np
+
+<span style="color: #FD971F;">N</span> = <span style="color: #AE81FF;">10000</span>
+np.random.seed<span style="color: #AE81FF;">(</span>seed=<span style="color: #AE81FF;">42</span><span style="color: #AE81FF;">)</span>
+
+<span style="color: #FD971F;">x</span> = np.random.uniform<span style="color: #AE81FF;">(</span>size=N, low=<span style="color: #AE81FF;">0</span>, high=<span style="color: #AE81FF;">1</span><span style="color: #AE81FF;">)</span>
+<span style="color: #FD971F;">theta</span> = np.random.uniform<span style="color: #AE81FF;">(</span>size=N, low=<span style="color: #AE81FF;">0</span>, high=pi/<span style="color: #AE81FF;">2</span><span style="color: #AE81FF;">)</span>
+
+<span style="color: #FD971F;">P</span> = <span style="color: #F92672;">sum</span><span style="color: #AE81FF;">(</span>x + np.sin<span style="color: #66D9EF;">(</span>theta<span style="color: #66D9EF;">)</span> &gt; <span style="color: #AE81FF;">1</span><span style="color: #AE81FF;">)</span> / N
+<span style="color: #AE81FF;">2</span>/P
+</pre>
+        </div>
+
+        <pre class="example">3.128911138923655</pre>
+      </div>
+    </div>
+
+
+    <div id="outline-container-orgb6fc6bd" class="outline-2">
+      <h2 id="orgb6fc6bd"><span class="section-number-2">3</span> Using Monte Carlo experiments</h2>
+      <div class="outline-text-2" id="text-3">
+        <p>
+          A method that is easier to understand and does not make use of the \(\sin\) function is based on the fact that
+          if \(X \sim U(0,1)\) and \(Y \sim U(0,1)\), then \(P[X^2+Y^2 \leq 1] = \pi/4\) (see <a
+            href="https://en.wikipedia.org/wiki/Monte_Carlo_method">"Monte Carlo method" on Wikipedia</a>).
+          The following code uses this approach:
+        </p>
+
+        <div class="org-src-container">
+          <pre class="src src-python"><span style="color: #F92672;">import</span> matplotlib.pyplot <span style="color: #F92672;">as</span> plt
+
+np.random.seed<span style="color: #AE81FF;">(</span>seed=<span style="color: #AE81FF;">42</span><span style="color: #AE81FF;">)</span>
+<span style="color: #FD971F;">x</span> = np.random.uniform<span style="color: #AE81FF;">(</span>size=N, low=<span style="color: #AE81FF;">0</span>, high=<span style="color: #AE81FF;">1</span><span style="color: #AE81FF;">)</span>
+<span style="color: #FD971F;">y</span> = np.random.uniform<span style="color: #AE81FF;">(</span>size=N, low=<span style="color: #AE81FF;">0</span>, high=<span style="color: #AE81FF;">1</span><span style="color: #AE81FF;">)</span>
+
+<span style="color: #FD971F;">inside</span> = <span style="color: #AE81FF;">(</span>x**<span style="color: #AE81FF;">2</span> + y**<span style="color: #AE81FF;">2</span><span style="color: #AE81FF;">)</span> &lt;= <span style="color: #AE81FF;">1</span>
+<span style="color: #FD971F;">outside</span> = np.logical_not<span style="color: #AE81FF;">(</span>inside<span style="color: #AE81FF;">)</span>
+
+<span style="color: #FD971F;">fig</span>, <span style="color: #FD971F;">ax</span> = plt.subplots<span style="color: #AE81FF;">(</span><span style="color: #AE81FF;">1</span><span style="color: #AE81FF;">)</span>
+ax.scatter<span style="color: #AE81FF;">(</span>x<span style="color: #66D9EF;">[</span>inside<span style="color: #66D9EF;">]</span>, y<span style="color: #66D9EF;">[</span>inside<span style="color: #66D9EF;">]</span>, c=<span style="color: #E6DB74;">'b'</span>, alpha=<span style="color: #AE81FF;">0</span>.<span style="color: #AE81FF;">2</span>, edgecolor=<span style="color: #AE81FF;">None</span><span style="color: #AE81FF;">)</span>
+ax.scatter<span style="color: #AE81FF;">(</span>x<span style="color: #66D9EF;">[</span>outside<span style="color: #66D9EF;">]</span>, y<span style="color: #66D9EF;">[</span>outside<span style="color: #66D9EF;">]</span>, c=<span style="color: #E6DB74;">'r'</span>, alpha=<span style="color: #AE81FF;">0</span>.<span style="color: #AE81FF;">2</span>, edgecolor=<span style="color: #AE81FF;">None</span><span style="color: #AE81FF;">)</span>
+ax.set_aspect<span style="color: #AE81FF;">(</span><span style="color: #E6DB74;">'equal'</span><span style="color: #AE81FF;">)</span>
+
+plt.savefig<span style="color: #AE81FF;">(</span>matplot_lib_filename<span style="color: #AE81FF;">)</span>
+<span style="color: #F92672;">print</span><span style="color: #AE81FF;">(</span>matplot_lib_filename<span style="color: #AE81FF;">)</span>
+</pre>
+        </div>
+
+        <div class="figure">
+          <p><img src="/assets/images/pi-square.png" alt="/assets/images/pi-square.png"/></p>
+        </div>
+
+        <p>
+          It is then straightforward to obtain an approximation to &pi; by counting how many times, on
+          average, \(X^2 + Y^2 \le 1\):
+        </p>
+
+        <div class="org-src-container">
+          <pre class="src src-python"><span style="color: #AE81FF;">4</span> * np.mean<span style="color: #AE81FF;">(</span>inside<span style="color: #AE81FF;">)</span></pre>
+        </div>
+
+        <pre class="example">3.1556</pre>
+      </div>
+    </div>
+
+
+    <div id="outline-container-orga44e510" class="outline-2">
+      <h2 id="orga44e510"><span class="section-number-2">4</span> Through Wallis' product</h2>
+      <div class="outline-text-2" id="text-4">
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Wallis_product">John Wallis' product</a> for &pi; states that the
+          infinite product below converges to \(\pi / 2\).
+          Check out the <a href="https://www.youtube.com/watch?v=8GPy_UMV-08">geometrical proof</a>.
+        </p>
+
+        <div class="org-src-container">
+          <pre class="src src-python"><span style="color: #FD971F;">prod</span> = <span style="color: #AE81FF;">1</span>
+<span style="color: #F92672;">for</span> i <span style="color: #F92672;">in</span> <span style="color: #F92672;">range</span><span style="color: #AE81FF;">(</span><span style="color: #AE81FF;">2</span>, N<span style="color: #AE81FF;">)</span>:
+    <span style="color: #FD971F;">prod</span> *= i / <span style="color: #AE81FF;">(</span>i-<span style="color: #AE81FF;">1</span><span style="color: #AE81FF;">)</span> <span style="color: #F92672;">if</span> i % <span style="color: #AE81FF;">2</span> == <span style="color: #AE81FF;">0</span> <span style="color: #F92672;">else</span> <span style="color: #AE81FF;">(</span>i-<span style="color: #AE81FF;">1</span><span style="color: #AE81FF;">)</span> / i
+
+prod * <span style="color: #AE81FF;">2</span>
+</pre>
+        </div>
+
+        <pre class="example">3.141435562175509</pre>
+      </div>
+    </div>
+
+
+    <div id="outline-container-org3475054" class="outline-2">
+      <h2 id="org3475054"><span class="section-number-2">5</span> As the root of a function</h2>
+      <div class="outline-text-2" id="text-5">
+        <p>
+          As we know, \(sin(\pi) = 0\), thus value for &pi; can be found by approximating the root (one of them, that is) of
+          \(sin(x)\).
+          This can be done using <a href="https://en.wikipedia.org/wiki/Newton's_method">Newton's method</a>, for
+          instace.
+        </p>
+
+        <div class="org-src-container">
+          <pre class="src src-python"><span style="color: #F92672;">from</span> scipy.optimize <span style="color: #F92672;">import</span> fsolve
+<span style="color: #FD971F;">results</span> = fsolve<span style="color: #AE81FF;">(</span>sin, x0=<span style="color: #AE81FF;">3</span><span style="color: #AE81FF;">)</span>
+results<span style="color: #AE81FF;">[</span><span style="color: #AE81FF;">0</span><span style="color: #AE81FF;">]</span>
+</pre>
+        </div>
+
+        <pre class="example">3.141592653589793</pre>
+      </div>
+    </div>
+
+  </div>
+</body>

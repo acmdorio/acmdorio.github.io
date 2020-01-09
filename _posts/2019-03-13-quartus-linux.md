@@ -1,7 +1,8 @@
 ---
-title: "How to install Altera Quartus II on Linux"
-# link: https://github.com/baioc/quartus-linux
-excerpt: "Quartus II installation tutorial for Debian-based Linux distros"
+title: "How to install Quartus II on Linux"
+excerpt: "Altera Quartus II installation tutorial for Debian-based Linux distros"
+header:
+  teaser: /assets/images/s4pu.png
 categories:
   - tutorial
 tags:
@@ -11,6 +12,7 @@ toc: true
 toc_icon: "bars"
 toc_label: "Contents"
 toc_sticky: true
+author_profile: true
 ---
 
 Please note that this tutorial is intended for Debian-derived Linux distros such as Ubuntu, Mint, MX, etc.
@@ -20,7 +22,7 @@ Users running Arch-based distros should refer to the [Arch Wiki](https://wiki.ar
 
 ## 1) Download & Install
 
-Go to [Intel Download Center](https://www.intel.com/content/www/us/en/programmable/downloads/download-center.html).
+Go to [Intel Download Center](https://www.intel.com/content/www/us/en/programmable/downloads/download-center.html){: .btn}.
 
 **Select by Device** -> Choose Device Family -> Choose your Device
 

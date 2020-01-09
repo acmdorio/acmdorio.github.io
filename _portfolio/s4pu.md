@@ -1,5 +1,5 @@
 ---
-title: "S4PU"
+title: "S4PU - Simple Forth Processing Unit"
 excerpt: "A stack-based 16-bit CPU written in VHDL"
 header:
   teaser: /assets/images/s4pu.png
@@ -17,7 +17,7 @@ The machine runs on a subset of the [Forth programming language](https://en.wiki
 It fits what Koopman calls the "ML0 design":
   - Multiple Stacks: one dedicated to operating data and another to store return addresses.
   - Large Stack Buffer: although "large" is debatable, in this context it means the stack does not reside in main memory.
-  - 0-Operand: instructions have no operads associated with the opcode, thus operands are always implicitly at the top of the data stack.
+  - 0-Operand: there are no operands associated with an instruction's opcode, the top of the data stack is implicitly used instead.
 
 As is the case with most stack computers, S4PU's strength and weakness is its simplicity.
 While performance levels will never reach those of pipelined superscalar processors, stack-based CPUs are generally simpler, cheaper and less power-hungry.
@@ -28,9 +28,10 @@ More importantly, designs such as this one are really simple and easy to underst
 Implementation
 ----
 
-The processor was implemented in VHDL using Altera (which is now part of Intel) [Quartus II](https://en.wikipedia.org/wiki/Altera_Quartus) and synthesis was targeted at an EP2C35F672C6 chip from the Cyclone II family of FPGAs, so that it could be physically prototyped.
+The processor was implemented in VHDL using Altera (which is now a part of Intel) [Quartus II](https://en.wikipedia.org/wiki/Altera_Quartus) and synthesis was targeted at an EP2C35F672C6 chip from the Cyclone II family of FPGAs, so that it could be physically prototyped.
 Testbench simulations were performed in ModelSim.
 
-In order to program the CPU, a simple assembler program was developed in Python to translate S4PU's assembly language into a Memory Initialization File (.mif) which was later loaded into the FPGA's memory cells standing for the computer's program memory.
+In order to program the CPU, a simple assembler program was developed in Python to translate S4PU's assembly language into Memory Initialization File (.mif) format which was later loaded into the FPGA's memory cells standing for the computer's program memory.
 
-I've made the whole project, including pt-BR documentation, available at [GitLab](https://gitlab.com/baioc/s4pu).
+I've made the whole project, including documentation (pt-BR), available on [GitLab](https://gitlab.com/baioc/s4pu).
+{: .notice--info}

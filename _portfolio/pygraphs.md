@@ -7,14 +7,17 @@ header:
 
 `pygraphs` is a Python package dedicated to the study of [graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) as discrete data structures and graph algorithms.
 
+Source code is available on [GitLab](https://gitlab.com/baioc/pygraphs), together with simple makefiles.
+{: .notice--info}
+
 
 Features
 ----
 
-- Efficient data structures written in modern C++ 17
+- Efficient data structures written in modern C++ 17 and wrapped into Python using [Swig](http://www.swig.org/)
   - Directed and undirected Graphs
   - Priority Queue using Binary Heap
-- Classic algorithms are implemented in Python 3 (with type annotations)
+- Classic algorithms are implemented in Python 3 with type annotations
   - Breadth-First and Depth-First iteration with generators
   - Finding Eulerian cycles through Hierholzer's algorithm
   - Computing the minimum Hamiltonian circuit using Held-Karp's method
@@ -28,10 +31,10 @@ Features
 Usage
 ----
 
-**Note:** at this point, distributed packages are compatible with **Linux only** and require a recent version of libstdc++.
+**Note:** at this point, distributed packages are compatible with **Linux only** and require a recent version of `libstdc++`.
 {: .notice}
 
-1. Install via [pip](https://test.pypi.org/project/pygraphs/):
+1. Install via [pip](https://test.pypi.org/project/pygraphs/){: .btn .btn--info}:
 
     ```bash
     pip install -i https://test.pypi.org/simple/ pygraphs --user
@@ -42,11 +45,3 @@ Usage
     ```python
     import pygraphs as pyg
     ```
-
-
-Build process
-----
-
-Source code is made available in [GitLab](https://gitlab.com/baioc/pygraphs), together with simple makefiles.
-
-Data structures and some key operations are implemented in C++17 (compiled with gcc 9.1.0) and wrapped into Python 3.6+ with [Swig](http://www.swig.org/) (version 4.0.0).

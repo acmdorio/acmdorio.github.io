@@ -32,7 +32,7 @@ Experience
 
 Skills
 ------
-* Well versed in Generic Programming and other advanced techniques using C and Scheme programming languages
+* Well versed in C and Lisp programming
 * Solid understanding of OOP concepts in C++, Java and Python, with some knowledge on Programming Patterns
 * Experience using Linux and Git version control software
 * Disciplined and organized, which also apply to code
@@ -52,5 +52,5 @@ Awards
 
 Teaching
 ------
-* Workshop: [Matemática Funcional em Scheme](https://baioc.github.io/scheme) (2019)
+* Workshop: Matemática Funcional em Scheme (2019)
   * Semana Acadêmica de Computação e Sistemas (SECCOM UFSC)
