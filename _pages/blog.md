@@ -16,3 +16,5 @@ classes: wide
 + [Generators === Lazy Sequences / Streams ?](https://docs.racket-lang.org/guide/for.html)
 
 + [Monitoring variables polymorphically](https://gitlab.com/snippets/1915332) in Theseus
+
+<!-- @XXX: https://portfoliohub.umihi.co/?page=1&location=(20)Brazil -->

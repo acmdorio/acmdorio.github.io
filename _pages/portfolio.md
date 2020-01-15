@@ -1,6 +1,6 @@
 ---
 title: "Portfolio"
-permalink: /projects/
+permalink: /portfolio/
 layout: collection
 collection: portfolio
 entries_layout: grid
