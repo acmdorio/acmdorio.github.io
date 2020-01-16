@@ -86,6 +86,11 @@ author:
       icon: "fas fa-eye"
       url: "http://lattes.cnpq.br/5048826722066095"
 
+# enables MathJax, as explained at https://alan97.github.io/random/mathjax/
+# with reference to documentation at https://mmistakes.github.io/minimal-mistakes/docs/javascript/
+head_scripts:
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML
+
 footer:
   # links:
   #   - label: "Twitter"
