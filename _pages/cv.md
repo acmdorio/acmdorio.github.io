@@ -25,7 +25,7 @@ Experience
 * Video Coding Research (2018 - Present)
   * Embedded Computing Laboratory, UFSC
   * Design of hardware (FPGA acceleration units described in Verilog & VHDL) and software (C++ & embedded C)
-  * Hardware-software integration and algorithm design related to Intra & Inter Motion Estimation in HEVC and other state-of-the-art standards
+  * Hardware-software integration and state-of-the-art algorithm design related to Intra & Inter Motion Estimation in HEVC and VVC standards
 * Electronics Internship (2016 - 2017)
   * Inergiae Conversores Estáticos, Florianópolis - SC
   * Assembly and testing of High Voltage Static Converters
@@ -41,9 +41,9 @@ Skills
 
 Languages
 ------
-* English - Fluent, with a B2 Level certified by Cambridge FCE
-* French - Basic-intermediate level
-* Portuguese - Native speaker
+* English - Fluent, B2
+* French - Intermediate, B1
+* Portuguese (Brazilian) - Native
 
 Awards
 ------
