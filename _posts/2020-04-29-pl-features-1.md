@@ -63,7 +63,7 @@ The other option is dynamic scoping, in which name resolution depends on the exe
 **example**
 
 ```
-const var x = 1;
+var x = 1;
 
 fun foo() {
     x = x * x;
@@ -77,13 +77,13 @@ fun bar() {
 ```
 
 In the example above, `foo` is the key function, because it is using a variable name `x` which is not bound anywhere in its body.
-On a language with static scoping, a call to `foo` will always print `1` (even from within `bar`), since the `x` in `foo` will be refering to the global constant that if ommited would cause an "usage of undefined variable..." error.
+On a language with static scoping, a call to `foo` will always print `1` (supposing the global `var x` isn't changed elsewhere), since the `x` in `foo` will be refering to the global that if ommited would cause an "usage of undefined variable..." error.
 This is also called an "early binding" of `x`.
 
 If we had dynamic scoping, `foo` will print something different depending on each situation: if we added the call `foo()` right at the end of this snippet, it would print `1`; if we instead called `bar()`, then it would print `4`; if we had something like `{var x = 3; foo();}` then it would print `9`; if we did `{var x = 4; foo(); foo();}` it would first print `16` and then `256`.
 This is because the language is doing a "late binding" of `x`: choosing its value by looking for the nearest (in execution time) definition of that name.
 
-Dynamic scoping makes it dramatically harder for humans and analysis tools (such as a compiler) to reason about code and I have never seen a reason to prefer it.
+Dynamic scoping makes it dramatically harder for humans and analysis tools (such as a compiler) to reason about code and I have **never** been presented with a reason to prefer it.
 Thankfully, most programming languages prefer lexical scoping (exceptions are ***Perl***, ***Emacs Lisp*** and ***Common Lisp***).
 
 ### Parametrization
@@ -120,7 +120,7 @@ fun pow(x, n) { // returns x ^ n
 ```
 
 This is code repetition, so one way to implement it with better reuse would be with a generic `empower` function which is *behaviour-parameterized*.
-Since one of the arguments is a function that can be passed in just like any data argument; and the returned value is a function (which happens to be a [closure](https://en.wikipedia.org/wiki/Closure_(computer_programming))) in the same way it could be returning a number, we may now say the language has first-class functions.
+Since one of the arguments is a function that can be passed in just like any data argument, and the returned value is a function (which happens to be a [closure](https://en.wikipedia.org/wiki/Closure_(computer_programming))) in the same way it could be returning a number, we may now say the language has first-class functions.
 
 ```
 fun empower(operation, base) {
@@ -149,7 +149,7 @@ One language that does not *fully* support this is ***C***: there are function p
 Some programmers like to classify code into "pure" and "non-pure", where the latter means there are no side-effects caused by that code's execution.
 Side effects include writing to a file, playing a sound, printing something to the terminal, displaying graphics on a screen and sending data over the web; that is, the effects caused by the program that are actually meaningful to human beings and other real-world systems.
 
-While most programmers agree that **hidden undesirable** side-effects are the cause of most bugs in their programs, they also want to be able to produce their **desired effects** without cumbersomeness, as producing side-effects in a controlled fashion, with a specific format, is usually the goal of real programs.
+While **hidden, undesirable side-effects** tend to be the cause of most bugs, programmers should be able to produce their **desired effects** without cumbersomeness, as producing side-effects in a controlled fashion and with a specific format is the goal of most real programs.
 This means that, even though we usually want purely functional constructs available, we also want to be able to debug programs through `print`s or modify some database without having to wrap all that into ["monoids in the category of endofunctors"](https://blog.merovius.de/2018/01/08/monads-are-just-monoids.html).
 
 The only times I would say a completely pure language is desirable is when it is being used in specific contexts to describe something declaratively while being processed by another program.
@@ -174,42 +174,43 @@ While user-defined macros are the usual, more general example of metaprogramming
 - Custom static analysis tools: ***Java*** annotations and ***Jai***'s compiler API.
 - Toggling language features on and off at different parts of the program: ***Odin*** has `#no_bounds_check` to make some arrays faster.
 
+For more information on this topic, there's a recently published [Survey of Metaprogramming Languages](https://doi.org/10.1145/3354584).
+{: .notice}
+
 ### Portable data
 
 > No man is an island entire of itself, and most programs aren't as well.
 
 Real programs communicate, either with human beings, with the environment, with other programs that share the same machine, or with programs on the other side of the internet.
-This means there are some characteristics we want the data representation in our language to have: 1. able to represent a great variety of things; 2. being serializable and easy to send back and forth; 3. being efficient; and 4. easy to manipulate and transform.
+This means there are some characteristics we want the data representation in our language to have: 1. able to represent a great variety of things; 2. being serializable and easy to send back and forth and 3. efficiency when applying common transformations.
 The problem is that these are all conflicting goals.
 
 Strings make the perfect example of this: in ***C*** they are null-terminated sequence of bytes, which means they are memory efficient and can be arbitrarily big but we can't even ask what their length is without going looping through every character; some languages use the first N bytes in the string as its size, but then you may be stuck with an arbitrary maximum length such as 255; others use Unicode encoding, meaning it supports all characters from every existing language and other important communication means such as 💩 ("pile of poo" emoji, U+1F4A9), but then either wastes a lot of space when storing the more frequently used ASCII digits or makes it very difficult to get to single characters because their size varies from 1 to 4 bytes.
 
-Since I don't have much experience dealing with data representation portability problems, I can only point to something which I believe may work well: it needs to support common data types and structures (named fields, numbers, text, sequences, binary data and maybe a "missing content" value such as `null`), and thus may need to include some kind of metadata (text encoding signaling, endianess, etc).
+The chosen format needs to support common data types and structures (these could be a hint to the language's built-in types):
+- Numbers
+- Text
+- Bytes (for binary blobs)
+- **Maybe** a "missing content" value such as `null`
+- "ordered data" (eg. Sequences)
+- "named data" (eg. Dictionaries)
+- "unordered data" (eg. Sets)
+
 ***JSON*** and ***XML*** seem like good references as they are well structured and widely accepted; ***EDN*** may be a nice alternative that's as lightweight as ***JSON*** and as feature-complete as ***XML***.
-It would also be nice if there were some directives in the language to allow programmers to query and change the representation of these common data types.
+It would also be nice if there were some directives in the language to allow programmers to query and change the representation of these common data types (or, equivalently, to have different built-in types for the different representations).
 
 **PS:** since I'm talking about text, I'll just point it out here that multiline strings are nice to have.
 
-### Scientific support
-
-The most important (in my opinion) applications of any programming language are those used to solve real-world engineering problems, normally associated with scientific computing.
-
-This is probably the hardest feature (or set of features) to define, because there could really be anything involved: biological computing needs efficient (and replicable) number crunching operations; a few math problems will require symbolic representation, some will need infinite precision arithmetic, while others want vectorization and fast matrix operations; real-time and embedded systems programming require code to be some mixture of time-aware, memory-aware, hardware-aware and concurrency-aware; object-orientation and message-passing can be really useful when programming physics simulations; there will be applications with strict requirements of correctness and safety... the list goes on and on.
-
-In this case, I won't try to list features, but I'll just state instead that if (when?) a programming language is created with the goal of catering to some specific area, it needs to be developed with these requirements in mind.
-One option is to give the language lots of flexibility, so that users may build the required features themselves (***Lisp*** does this with macros, ***C++*** is always growing its feature list while maintaining high performance levels and ***Python***'s great number of easy-to-install libraries help it in this aspect as well).
-
 ### Concurrency awareness
 
-It has been stated time after time that computing systems have evolved past single-threaded mentality and programming languages should keep up with the technological advances by providing mechanisms to deal with concurrency.
-From operating systems to web pages, asynchronous events and high performing code should be taken into consideration.
+It has been stated time after time that computing systems have evolved past the single-threaded mentality and that programming languages should keep up with the technological advances by providing mechanisms to deal with concurrency.
+From operating systems to web pages: asynchronous events and high performance should be taken into consideration.
 
 When general-purpose programming languages don't provide support for concurrency, these mechanisms are strapped to the language through external libraries and/or by interfacing with other languages.
 These solutions are never as efficient or user-friendly as they would have been with proper support from the language's semantics and built-in tools, so most modern languages strive for concurrent support from the get-go.
-One must be careful, however, [not to color their functions](http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/) and thus create usability issues in the language when mixing non-concurrent with concurrent code.
+One must be careful, however, to avoid creating usability issues in the language when mixing non-concurrent with concurrent code (eg. not to [color their functions](http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/)).
 
-Examples that go wrong with this include ***Python***, ***Dart*** and ***JavaScript*** (and its derivations), while some that actually have nicer mechanisms are ***Go***, ***Lua***, ***Ruby***, ***Java*** and ***C#*** with their built-in threads.
-It should be noted that languages which use **lazy evaluation** by default (such as ***Haskell***) do not usually go well with concurrent programming (even if "purely" functional).
+***Go***, ***Lua*** and ***Java*** are examples with nice built-in concurrency mechanisms.
 
 ## Core **tools** and **implementation**
 
@@ -222,15 +223,15 @@ Official documentation of the language's standard functions, unique syntax and s
 It should include intuitive examples for begginers and perhaps links to more advanced content for veterans.
 
 Having a standardised way to document code is also nice, since people can build documentation generators (maybe it could even be packaged together with the main compiler/interpreter), issue trackers and other such tools.
-Languages that I know that do this nicely are ***Java***, ***C++***, ***Python***, ***Haskell*** and ***Racket***, but there are probably others.
+Languages that I know that do this nicely are ***Java***, ***Python***, ***Haskell*** and ***Racket***, but there are probably others.
 
 ### Intuitive debugging
 
 Debugging should be quick and intuitive, as that will be the activity some programmers will be spending most of their time on.
-It's probably not a good idea to rely too much on IDEs for this, as there are people (like me) that don't like using them.
+It's probably not a good idea to rely too much on IDEs for this, as some people (like me) don't like using them.
 
 The first aspect of debugging is actually reading any error messages emitted by the code analysis tools: they should be concise and clear about what the error is and where it's located.
-***C++***'s templates are famous for causing compiler errors with hundreds of useless lines; and in my (very limited) experience with ***Haskell*** compiler errors I could never understand what had gone wrong.
+***C++***'s templates are famous for causing compiler errors with hundreds of useless lines.
 
 ### Easy packaging
 
@@ -241,12 +242,6 @@ Ideally, both of these would be as easy as typing a single command into the term
 Each one of those methods has its pros & cons, but most of them require a bunch of build configuration files (which need to be written in an entirely new language), and some external tool that may have portability issues among different operating systems; or are a pain to set up and maintain without an IDE.
 My bet would be on having a standard, built-in way to develop, package, distribute, find and download libraries.
 
-Executable distribution is probably even harder: if the language is compiled to binary there's a need for multiple compiler backends, software needs to be recompiled for each supported platform and ABI incompatibilities may arise; whereas interpreted languages need to distribute their runtime as something that can be dynamically linked to (and VM incompatibility problems may arise) or that is statically included in every single executable.
-So far, I can't think of a better alternative to what we have for machine-code compiled languages other than architecture-specific binary distribution.
-The same holds for languages that are compiled to C, such as some implementations of ***Scheme***.
-
-Meanwhile, most interpreted languages don't seem to provide an option other than having the interpreted already installed on the user's machine and using it to execute the source files directly.
-The exception here is ***Racket***'s `raco`, which can either package pre-compiled bytecode to be executed on another computer's VM or statically link everything that is required into a single binary.
 Something I have recently used that has really pleased me was ***Lua***'s LÖVE framework which can build standalone executables as easily as
 
 ```shell
@@ -269,8 +264,9 @@ An example of this is ***Scheme***, which requires implementations to be properl
 
 Another aspect to think about is how hard it is to make existing programs faster.
 Ideally, performant code would not look too much different from what is "idiomatic" code in the language.
-I believe ***Jai*** has some nice features regarding this aspect with Array of Structs (AoS) to Struct of Arrays (SoA) transformations that pretty much maintain syntax and directives to command inlining / non-inlining of specific procedures at each call site.
-***C++*** has move semantics and RVO; and other examples are ***Octave*** and ***Julia***, in which most functions will work exactly the same for single numbers or vectors, and optimize accordingly.
+I believe ***Jai*** has some nice features regarding this aspect with Array of Structs (AoS) to Struct of Arrays (SoA) transformations that pretty much maintain syntax and directives to command inlining / non-inlining of procedures at each call site.
+***C++*** has move semantics and RVO.
+Other examples are ***Octave*** and ***Julia***, in which most functions will work exactly the same for single numbers or vectors, and optimize accordingly.
 
 Some optimizations I'd say should be common (if not enforced by the high-level language's semantics) are:
 - Dead code elimination
@@ -278,7 +274,7 @@ Some optimizations I'd say should be common (if not enforced by the high-level l
 - Constant propagation
 - Procedure inlining
 - Loop invariant extraction
-- Caching of pure results
+- Caching of "pure" results
 - Tail-call optimization
 - Loop fusing (as in [***Julia***'s dot call expressions](https://docs.julialang.org/en/v1/manual/mathematical-operations/#man-dot-operators-1))
 
@@ -299,6 +295,6 @@ I definitely don't consider this feature as important as extensibility ([there i
 
 All features listed here have to do with programming language semantics, standard library, tools and implementation; syntactic aspects weren't considered and will be left to a second part of this (extensive) rant.
 
-At some point I may try to assemble a table of which languages have which features, with the intention on comparing them and helping other people choose what's best for them, be it either an existing language or what set of characteristics their new language will want to have.
+At some point I may try to assemble a table of which languages have which features, with the intention on comparing them and helping other people choose what's best for them, be it either an existing language or what set of characteristics they'll want their new language to have.
 
 I would also like to know what languages people think have all the mentioned features, as well as which others they can say that definitely don't accomplish them.
