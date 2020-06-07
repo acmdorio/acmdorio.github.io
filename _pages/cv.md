@@ -34,7 +34,7 @@ Skills
 ------
 * Well versed in C and Lisp (Scheme) programming
 * Solid understanding of OOP concepts in C++, Java and Python, with some knowledge on Design Patterns
-* Experience using Linux and Git version control software
+* Experience using Linux OS and Git version control
 * Disciplined and organized, which also apply to code
 * Familiarity with HDLs and Altera Quartus FPGA tools
 * Ability to design, analyse and assemble electronic circuits

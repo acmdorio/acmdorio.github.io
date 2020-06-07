@@ -86,16 +86,16 @@ This is because the language is doing a "late binding" of `x`: choosing its valu
 Dynamic scoping makes it dramatically harder for humans and analysis tools (such as a compiler) to reason about code and I have **never** been presented with a reason to prefer it.
 Thankfully, most programming languages prefer lexical scoping (exceptions are ***Perl***, ***Emacs Lisp*** and ***Common Lisp***).
 
-### Parametrization
+### First-Class Parameterization
 
 > A big part of programming is about re-using existing code and making existing code re-usable.
 
 For instance, instead of writing procedures `pow2` and `pow3` to compute the square and cube of a number, it is probably a better idea to write a single `pow` procedure which is *parameterized* on the power one wishes to raise a number by.
 This can be done via function arguments, where `pow(x, n)` could raise the value `x` to the n-th power.
-Now `pow2(x)` and `pow3(x)` can reuse the code in the more generic function, since they are equivalent to `pow(x, 2)` and `pow(x, 3)`, where this *data-parametrization* of `pow` is possible because `n` is a number that can be passed to the algorithm.
+Now `pow2(x)` and `pow3(x)` can reuse the code in the more generic function, since they are equivalent to `pow(x, 2)` and `pow(x, 3)`, where this *data-parameterization* of `pow` is possible because `n` is a number that can be passed to the algorithm.
 
 Having first-class functions means that behaviour-things (functions) have the same rights as data-things (numbers, strings, etc), namely to be passed around in the code.
-This gives us the capacity to write more generic code that can be easily reused through *parametrization*.
+This gives us the capacity to write more generic code that can be easily reused through *parameterization*.
 Let us imagine some language that does not have a multiplication operator: we can only add and subtract numbers.
 In that case we may like to implement multiplication as a function, and it will look a lot like the `pow` implementation:
 
@@ -140,7 +140,7 @@ const var pow = empower(times, 1);
 ```
 
 While first-class functions are pretty much mandatory in functional languages because the paradigm makes heavy use of them, they are also supported in most object-oriented languages because objects are first-class citizens and can easily wrap a function inside them.
-One language that does not *fully* support this is ***C***: there are function pointers, which can be passed in as arguments but can't be used as closures, they also require strange syntax and are usually used in generic code that casts away type information and is thus considered unsafe; the same holds for macros, which are another way to achieve this idea of *behaviour parametrization*.
+One language that does not *fully* support this is ***C***: there are function pointers, which can be passed in as arguments but can't be used as closures, they also require strange syntax and are usually used in generic code that casts away type information and is thus considered unsafe; the same holds for macros, which are another way to achieve this idea of *behaviour parameterization*.
 
 ### Side-effects
 
@@ -191,7 +191,7 @@ The chosen format needs to support common data types and structures (these could
 - Numbers
 - Text
 - Bytes (for binary blobs)
-- **Maybe** a "missing content" value such as `null`
+- **Maybe**: a "missing content" value such as `null`
 - "ordered data" (eg. Sequences)
 - "named data" (eg. Dictionaries)
 - "unordered data" (eg. Sets)
