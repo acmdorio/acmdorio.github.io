@@ -6,13 +6,9 @@ header:
 categories:
   - tutorial
 tags:
-  - EDA
   - Linux
-toc: true
-toc_icon: "bars"
-toc_label: "Contents"
-toc_sticky: true
-author_profile: true
+  - EDA
+toc_sticky: no
 ---
 
 Please note that this tutorial is intended for Debian-derived Linux distros such as Ubuntu, Mint, MX, etc.

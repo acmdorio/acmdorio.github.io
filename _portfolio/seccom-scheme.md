@@ -34,7 +34,7 @@ O oficina abordou algumas **técnicas de programação funcional** em Scheme par
   - **Séries infinitas e *Memoization***
 
 
-Bibliografia
+Referências
 ----
 
 - [**Structure and Interpretation of Computer Programs <br/> (SICP, a.k.a. "The Wizard Book")** <br/> - Abelson H., Sussman G. J.](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html)

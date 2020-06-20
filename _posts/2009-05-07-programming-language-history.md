@@ -12,4 +12,5 @@ tags:
   - Programming Languages
 classes: wide
 author_profile: true
+toc: false
 ---

@@ -110,6 +110,10 @@ defaults:
       related: true
       author_profile: false
       search: true
+      toc: true
+      toc_icon: "bars"
+      toc_label: "Contents"
+      toc_sticky: yes
   # _pages
   - scope:
       path: "_pages"

@@ -1,5 +1,5 @@
 ---
-title: "An opinionated guide to programming language features - Part 1"
+title: "An opinionated guide to programming language features"
 excerpt: "What are some core features to look forward to on a programming language"
 header:
   teaser: /assets/images/code.png
@@ -7,10 +7,6 @@ categories:
   - blog
 tags:
   - Programming Languages
-toc: true
-toc_icon: "bars"
-toc_label: "Contents"
-toc_sticky: yes
 ---
 
 ## New programming languages
