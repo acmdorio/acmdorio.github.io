@@ -68,9 +68,8 @@ author:
   name: "Gabriel Baiocchi de Sant'Anna"
   avatar: "/assets/images/photo.jpg"
   bio:  >- # this means to ignore newlines until "baseurl:"
-    Computer Science undergrad and former research assistant (Video Coding team at UFSC's Embedded Computing Laboratory) with a background in Electronics.
-    Interested in Generic Programming, Programming Language Design & Implementation, Advanced Game Programming Techniques, Computer Architecture and Historic Swordsmanship.
-  location: "Brazil / France"
+    Computer Science undergrad and former research assistant at the Embedded Computing Laboratory (ECL UFSC) Video Coding team, with a background in Electronics.
+  # location: "Brazil / France"
   links: # look for icons at https://fontawesome.com/icons/
     - label: "LinkedIn"
       icon: "fab fa-linkedin"

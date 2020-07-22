@@ -15,7 +15,7 @@ sidebar:
 
 Education
 ------
-* Exchange period in Embedded Systems and Connected Objects (2020 - Ongoing)
+* Exchange period in Engineering: Embedded Systems and Connected Objects (2020 - Ongoing)
   * Grenoble INP - Ensimag, France
 * Bachelor Degree in Computer Science (2018 - Ongoing)
   * Universidade Federal de Santa Catarina, Brazil

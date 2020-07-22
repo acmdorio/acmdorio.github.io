@@ -12,7 +12,7 @@ Formerly a research assistant at UFSC's Embedded Computing Laboratory ([ECL]), s
 {: .text-justify}
 
 [UFSC]: https://ufsc.br/
-[Ensimag]: https://ensimag.grenoble-inp.fr
+[Ensimag]: https://ensimag.grenoble-inp.fr/en/education/embedded-systems-and-software-devices
 [ECL]: https://eclab.paginas.ufsc.br/
 [IFSC]: http://florianopolis.ifsc.edu.br/
 
