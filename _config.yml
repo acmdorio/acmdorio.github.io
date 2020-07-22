@@ -35,7 +35,7 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 4 # amount of posts to show
+paginate: 5 # amount of posts to show
 teaser: /assets/images/wizard.png
 paginate_path: /blog/page:num/
 timezone: # America/Sao_Paulo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -68,11 +68,16 @@ author:
   name: "Gabriel Baiocchi de Sant'Anna"
   avatar: "/assets/images/photo.jpg"
   bio:  >- # this means to ignore newlines until "baseurl:"
-    Computer Science undergrad with a background in Electronics.
+    Computer Science undergrad and former research assistant (Video Coding team at UFSC's Embedded Computing Laboratory) with a background in Electronics.
     Interested in Generic Programming, Programming Language Design & Implementation, Advanced Game Programming Techniques, Computer Architecture and Historic Swordsmanship.
-    Currently studying Video Coding techniques at UFSC's Embedded Computing Laboratory.
-  # location: "Florianópolis, Brazil"
-  links: # check out icons at https://fontawesome.com/icons/
+  location: "Brazil / France"
+  links: # look for icons at https://fontawesome.com/icons/
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/baioc/"
+    - label: "CV Lattes"
+      icon: "fas fa-eye"
+      url: "http://lattes.cnpq.br/5048826722066095"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/baioc"
@@ -82,9 +87,6 @@ author:
     - label: "Sourcerer"
       icon: "fas fa-hat-wizard"
       url: "https://sourcerer.io/baioc"
-    - label: "CV Lattes"
-      icon: "fas fa-eye"
-      url: "http://lattes.cnpq.br/5048826722066095"
 
 # enables MathJax, as explained at https://alan97.github.io/random/mathjax/
 # with reference to documentation at https://mmistakes.github.io/minimal-mistakes/docs/javascript/

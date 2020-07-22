@@ -5,14 +5,16 @@ search: true
 classes: wide
 ---
 
-I am a Computer Science BSc student at the Department of Computer Science and Statistics ([INE][ine]) of Universidade Federal de Santa Catarina ([UFSC][ufsc]).
-My current research activities are related to Video Coding techniques and are being conducted at UFSC's Embedded Computing Laboratory ([ECL][ecl]).
-I also have a background in Electronics due to a Professional/Technical Course at Instituto Federal de Santa Catarina ([IFSC][ifsc]) including experience dealing with High Voltage Static Converters.
+I am a Computer Science BSc student at Universidade Federal de Santa Catarina ([UFSC]), currently going through an exchange period at the École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble ([Ensimag]) of Grenoble INP.
 {: .text-justify}
-[ine]: https://ine.ufsc.br/
-[ufsc]: https://ufsc.br/
-[ecl]: https://eclab.paginas.ufsc.br/
-[ifsc]: http://florianopolis.ifsc.edu.br/
+
+Formerly a research assistant at UFSC's Embedded Computing Laboratory ([ECL]), specifically in the video coding research team; I also have a background in Electronics due to a Vocational/Technical Degree at Instituto Federal de Santa Catarina ([IFSC]), with experience dealing with high voltage static converters.
+{: .text-justify}
+
+[UFSC]: https://ufsc.br/
+[Ensimag]: https://ensimag.grenoble-inp.fr
+[ECL]: https://eclab.paginas.ufsc.br/
+[IFSC]: http://florianopolis.ifsc.edu.br/
 
 This personal website acts as a CV, portfolio and blog.
 Posts will be scarce and written mainly for my own reference, but I would be glad to hear if someone else finds them useful.

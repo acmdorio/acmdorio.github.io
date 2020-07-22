@@ -15,14 +15,16 @@ sidebar:
 
 Education
 ------
+* Exchange period in Embedded Systems and Connected Objects (2020 - Ongoing)
+  * Grenoble INP - Ensimag, France
 * Bachelor Degree in Computer Science (2018 - Ongoing)
   * Universidade Federal de Santa Catarina, Brazil
-* Technical Course in Electronics (2014 - 2017)
+* Technical Degree in Electronics (2014 - 2017)
   * Instituto Federal de Santa Catarina, Brazil
 
 Experience
 ------
-* Video Coding Research (2018 - Present)
+* Video Coding Research (2018 - 2020)
   * Embedded Computing Laboratory, UFSC
   * Design of hardware (FPGA acceleration units described in Verilog & VHDL) and software (C++ & embedded C)
   * Hardware-software integration and state-of-the-art algorithm design related to Intra & Inter Motion Estimation in HEVC and VVC standards

@@ -5,7 +5,7 @@ header:
   teaser: /assets/images/wizard.png
 ---
 
-Tive a experiência de ministrar um minicurso na [SECCOM](https://seccom-ufsc.github.io/) - a Semana Acadêmica de Ciência da Computação e Sistemas de Informação da UFSC - sobre programação matemática funcional na linguagem Scheme.
+Tive a experiência de ministrar um minicurso na [SECCOM 2019](https://seccom-ufsc.github.io/) - a Semana Acadêmica de Ciência da Computação e Sistemas de Informação da UFSC - sobre programação matemática funcional na linguagem Scheme.
 
 Todo o conteúdo está disponível online na [webpage oficial](https://baioc.github.io/scheme) e também no [GitHub](https://github.com/baioc/seccom-scheme).
 {: .notice--info}
