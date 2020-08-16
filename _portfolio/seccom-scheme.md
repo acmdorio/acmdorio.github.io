@@ -29,7 +29,8 @@ O oficina abordou algumas **técnicas de programação funcional** em Scheme par
   - **Algoritmo de Exponenciação Rápida (*Successive Squaring*)**
   - **Método de Newton e outros Pontos Fixos**
 - Processamento simbólico e metalinguagem
-  - **Diferenciação Analítica de Polinômios**
+  - **Conversão de Polinômios para a Forma de Horner**
+  - **Diferenciação Analítica**
 - Paradigma de fluxo de dados: *streams* e *lazy evaluation*
   - **Séries infinitas e *Memoization***
 

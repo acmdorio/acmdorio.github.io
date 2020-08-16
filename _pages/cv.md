@@ -34,7 +34,7 @@ Experience
 
 Skills
 ------
-* Well versed in C and Lisp (Scheme) programming
+* Well versed in C and Scheme programming
 * Solid understanding of OOP concepts in C++, Java and Python, with some knowledge on Design Patterns
 * Experience using Linux OS and Git version control
 * Disciplined and organized, which also apply to code

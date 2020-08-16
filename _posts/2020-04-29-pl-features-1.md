@@ -142,7 +142,7 @@ One language that does not *fully* support this is ***C***: there are function p
 
 > A computer running programs with no side-effects is an electric ambient heater.
 
-Some programmers like to classify code into "pure" and "non-pure", where the latter means there are no side-effects caused by that code's execution.
+Some programmers like to classify code into "pure" and "non-pure", where the former means there are no side-effects caused by that code's execution.
 Side effects include writing to a file, playing a sound, printing something to the terminal, displaying graphics on a screen and sending data over the web; that is, the effects caused by the program that are actually meaningful to human beings and other real-world systems.
 
 While **hidden, undesirable side-effects** tend to be the cause of most bugs, programmers should be able to produce their **desired effects** without cumbersomeness, as producing side-effects in a controlled fashion and with a specific format is the goal of most real programs.
