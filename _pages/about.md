@@ -5,16 +5,11 @@ search: true
 classes: wide
 ---
 
-I am a Computer Science BSc student at Universidade Federal de Santa Catarina ([UFSC]), currently going through an exchange period at the École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble ([Ensimag]) of Grenoble INP.
+I am a Computer Science BSc student at Universidade Federal de Santa Catarina ([UFSC](https://ufsc.br/)), currently going through an exchange period at the École Nationale Supérieure d'Informatique et Mathématiques Appliquées de Grenoble ([Ensimag](https://ensimag.grenoble-inp.fr/en/education/embedded-systems-and-software-devices)) of Grenoble INP.
 {: .text-justify}
 
-Formerly a research assistant at UFSC's Embedded Computing Laboratory ([ECL]), specifically in the video coding research team; I also have a background in Electronics due to a Vocational/Technical Degree at Instituto Federal de Santa Catarina ([IFSC]), with experience dealing with high voltage static converters.
+Formerly a research assistant at UFSC's Embedded Computing Laboratory ([ECL](https://eclab.paginas.ufsc.br/)), specifically in the video coding research team; I also have a background in Electronics due to a Vocational/Technical Degree at Instituto Federal de Santa Catarina ([IFSC](http://florianopolis.ifsc.edu.br/)), with experience dealing with high voltage static converters.
 {: .text-justify}
-
-[UFSC]: https://ufsc.br/
-[Ensimag]: https://ensimag.grenoble-inp.fr/en/education/embedded-systems-and-software-devices
-[ECL]: https://eclab.paginas.ufsc.br/
-[IFSC]: http://florianopolis.ifsc.edu.br/
 
 This personal website acts as a CV, portfolio and blog.
 Posts will be scarce and written mainly for my own reference, but I would be glad to hear if someone else finds them useful.
@@ -23,6 +18,8 @@ Topics discussed include, but are not limited to, personal interests such as Gen
 
 
 ### Disclaimer
+
+Unless otherwise stated, code shown here is released under the [WTFPL](http://www.wtfpl.net/).
 
 All views or positions expressed on this site are my own and do not necessarily reflect the views of any entity whatsoever with which have been, am now, or will be affiliated with in the future.
 {: .text-justify}

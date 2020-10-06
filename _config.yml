@@ -35,7 +35,7 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 3 # amount of posts to show
 teaser: /assets/images/wizard.png
 paginate_path: /blog/page:num/
 timezone: # America/Sao_Paulo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones

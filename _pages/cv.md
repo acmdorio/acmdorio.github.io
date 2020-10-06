@@ -47,6 +47,7 @@ Languages
 * French - Intermediate, B1
 * Portuguese (Brazilian) - Native
 
+<!--
 Awards
 ------
 * Prêmio Calouro-Destaque (2018)
@@ -56,3 +57,4 @@ Teaching
 ------
 * Workshop: Matemática Funcional em Scheme (2019)
   * Semana Acadêmica de Computação e Sistemas (SECCOM UFSC)
+-->
