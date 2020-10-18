@@ -59,24 +59,21 @@ include:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
+  - jekyll-gist
   - jemoji
   - jekyll-include-cache
 
 author:
   name: "Gabriel Baiocchi de Sant'Anna"
   avatar: "/assets/images/photo.jpg"
-  bio:  >- # this means to ignore newlines until "baseurl:"
-    Computer Science undergrad and former research assistant at the Embedded Computing Laboratory (ECL UFSC) Video Coding team, with a background in Electronics.
+  bio:  >- # this means ignore new lines
+    Computer Science student and former research assistant at the Embedded Computing Laboratory (ECL UFSC) Video Coding team, with a background in Electronics.
   # location: "Brazil / France"
   links: # look for icons at https://fontawesome.com/icons/
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
       url: "https://www.linkedin.com/in/baioc/"
-    - label: "CV Lattes"
-      icon: "fas fa-eye"
-      url: "http://lattes.cnpq.br/5048826722066095"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/baioc"
