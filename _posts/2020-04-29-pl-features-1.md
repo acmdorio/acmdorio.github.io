@@ -1,6 +1,7 @@
 ---
 title: "An opinionated guide to programming language features"
 excerpt: "What are some core features to look forward to on a programming language"
+last_modified_at: 2020-10-25
 header:
   teaser: /assets/images/code.png
 categories:
@@ -175,22 +176,23 @@ For more information on this topic, there's a recently published [Survey of Meta
 
 ### Portable data
 
-> No man is an island entire of itself, and most programs aren't as well.
+> No program is an island entire of itself.
 
 Real programs communicate, either with human beings, with the environment, with other programs that share the same machine, or with programs on the other side of the internet.
 This means there are some characteristics we want the data representation in our language to have: 1. able to represent a great variety of things; 2. being serializable and easy to send back and forth and 3. efficiency when applying common transformations.
 The problem is that these are all conflicting goals.
 
-Strings make the perfect example of this: in ***C*** they are null-terminated sequence of bytes, which means they are memory efficient and can be arbitrarily big but we can't even ask what their length is without going looping through every character; some languages use the first N bytes in the string as its size, but then you may be stuck with an arbitrary maximum length such as 255; others use Unicode encoding, meaning it supports all characters from every existing language and other important communication means such as 💩 ("pile of poo" emoji, U+1F4A9), but then either wastes a lot of space when storing the more frequently used ASCII digits or makes it very difficult to get to single characters because their size varies from 1 to 4 bytes.
+Strings make the perfect example of this: in ***C*** they are null-terminated sequence of bytes, which means they are memory efficient and can be arbitrarily big but we can't even ask what their length is without going looping through every character; some languages use the first N bytes in the string as its size, but then you may be stuck with a somewhat arbitrary maximum length.
+
+And then for the characters inside those strings, some use Unicode encoding, meaning it supports all codepoints from every existing language and other important communication means such as 💩 ("pile of poo" emoji, U+1F4A9), but then either wastes a lot of space when storing the more frequently used ASCII digits or makes it difficult to index characters because their size varies from 1 to 4 bytes.
 
 The chosen format needs to support common data types and structures (these could be a hint to the language's built-in types):
-- Numbers
+- Numbers (symbolic / bit vectors)
+- Booleans
 - Text
-- Bytes (for binary blobs)
-- **Maybe**: a "missing content" value such as `null`
-- "ordered data" (eg. Sequences)
-- "named data" (eg. Dictionaries)
-- "unordered data" (eg. Sets)
+- "ordered data" (tuples, arrays, lists)
+- "unordered data" (sets, bags)
+- "named data" (records, dictionaries)
 
 ***JSON*** and ***XML*** seem like good references as they are well structured and widely accepted; ***EDN*** may be a nice alternative that's as lightweight as ***JSON*** and as feature-complete as ***XML***.
 It would also be nice if there were some directives in the language to allow programmers to query and change the representation of these common data types (or, equivalently, to have different built-in types for the different representations).
@@ -265,14 +267,16 @@ I believe ***Jai*** has some nice features regarding this aspect with Array of S
 Other examples are ***Octave*** and ***Julia***, in which most functions will work exactly the same for single numbers or vectors, and optimize accordingly.
 
 Some optimizations I'd say should be common (if not enforced by the high-level language's semantics) are:
-- Dead code elimination
 - Common subexpression elimination
-- Constant propagation
-- Procedure inlining
 - Loop invariant extraction
-- Caching of "pure" results
-- Tail-call optimization
+- Constant propagation
+- Tail-Call Optimization (TCO)
+- TCO modulo cons
 - Loop fusing (as in [***Julia***'s dot call expressions](https://docs.julialang.org/en/v1/manual/mathematical-operations/#man-dot-operators-1))
+- Copy on write
+- Dead code elimination
+- Procedure inlining
+- Return value optimization (RVO)
 
 ### Extensibility
 
