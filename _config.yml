@@ -18,7 +18,6 @@ title_separator: "|"
 masthead_title: "About"
 # logo: "/assets/images/avatar-88x88.png"
 email: baiocchi.gabriel@gmail.com
-description: "A Computer Science undergrad's blog, CV and portfolio."
 github_username: baioc
 minimal_mistakes_skin: "contrast" # "mint", "contrast", "dark", "neon"
 search: true
@@ -38,7 +37,6 @@ permalink: /:categories/:title/
 paginate: 3 # amount of posts to show
 teaser: /assets/images/wizard.png
 paginate_path: /blog/page:num/
-timezone: # America/Sao_Paulo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 locale: "en"
 
 # Exclude from processing.
@@ -71,18 +69,18 @@ author:
     Computer Science student and former research assistant at the Embedded Computing Laboratory (ECL UFSC) Video Coding team, with a background in Electronics.
   # location: "Brazil / France"
   links: # look for icons at https://fontawesome.com/icons/
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/baioc/"
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/baioc"
     - label: "GitLab"
       icon: "fab fa-gitlab"
       url: "https://gitlab.com/baioc"
-    - label: "Sourcerer"
-      icon: "fas fa-hat-wizard"
-      url: "https://sourcerer.io/baioc"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/baioc/"
+    - label: "Lattes"
+      icon: "fas fa-eye"
+      url: "http://lattes.cnpq.br/5048826722066095"
 
 # enables MathJax, as explained at https://alan97.github.io/random/mathjax/
 # with reference to documentation at https://mmistakes.github.io/minimal-mistakes/docs/javascript/
