@@ -5,7 +5,7 @@ search: true
 classes: wide
 ---
 
-Computer Science student from the Federal University of Santa Catarina ([UFSC](https://ufsc.br/)), currently doing an exchange at the École Nationale Supérieure d'Informatique et Mathématiques Appliquées of the Grenoble Institute of Technology ([Ensimag - Grenoble INP]((https://ensimag.grenoble-inp.fr/en/education/embedded-systems-and-software-devices))).
+Computer Science student from the Federal University of Santa Catarina ([UFSC](https://ufsc.br/)), currently doing an exchange at the École Nationale Supérieure d'Informatique et Mathématiques Appliquées of the Grenoble Institute of Technology ([Ensimag - Grenoble INP](https://ensimag.grenoble-inp.fr/en/education/embedded-systems-and-software-devices)).
 {: .text-justify}
 
 Formerly a research assistant at UFSC's Embedded Computing Laboratory ([ECL](https://eclab.paginas.ufsc.br/)), specifically in the Video Coding research team; I also have a background in Electronics due to a Technical Degree at the Federal Institute of Santa Catarina ([IFSC](http://florianopolis.ifsc.edu.br/)), with experience dealing with high voltage static converters.
