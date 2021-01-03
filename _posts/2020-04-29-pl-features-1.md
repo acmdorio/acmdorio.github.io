@@ -1,7 +1,7 @@
 ---
 title: "An opinionated guide to programming language features"
 excerpt: "What are some core features to look forward to on a programming language"
-last_modified_at: 2020-10-25
+last_modified_at: 2021-01-03
 header:
   teaser: /assets/images/code.png
 categories:
@@ -221,7 +221,7 @@ Official documentation of the language's standard functions, unique syntax and s
 It should include intuitive examples for begginers and perhaps links to more advanced content for veterans.
 
 Having a standardised way to document code is also nice, since people can build documentation generators (maybe it could even be packaged together with the main compiler/interpreter), issue trackers and other such tools.
-Languages that I know that do this nicely are ***Java***, ***Python***, ***Haskell*** and ***Racket***, but there are probably others.
+Languages that I know that do this nicely are ***Java***, ***Python***, ***Haxe***, ***Haskell*** and ***Racket***, but there are probably others.
 
 ### Intuitive debugging
 
@@ -236,7 +236,7 @@ The first aspect of debugging is actually reading any error messages emitted by 
 I see software packaging as having two aspects: 1. the packaging of libraries to other programmers and 2. the distribution of executable files to end users.
 Ideally, both of these would be as easy as typing a single command into the terminal, but that's far from reality for most languages.
 
-***Python*** has `pip`, ***Java*** has maven and gradle, ***Ruby*** has gems, ***Scheme*** has `akku` (also Snow and some others), ***Common Lisp*** has quicklisp, ***Racket*** has `raco`, ***Lua*** has `luarocks`, ***C*** & ***C++*** have... headers and object files.
+***Python*** has `pip`, ***Java*** has maven and gradle, ***Ruby*** has gems, ***Scheme*** has `akku` (also Snow and some others), ***Common Lisp*** has quicklisp, ***Racket*** has `raco`, ***Lua*** has `luarocks`, ***Haxe*** has `haxelib`, ***C*** & ***C++*** have... headers and object files.
 Each one of those methods has its pros & cons, but most of them require a bunch of build configuration files (which need to be written in an entirely new language), and some external tool that may have portability issues among different operating systems; or are a pain to set up and maintain without an IDE.
 My bet would be on having a standard, built-in way to develop, package, distribute, find and download libraries.
 
