@@ -7,7 +7,7 @@ sidebar:
   - title: "Contact"
     text: >-
       Email: [baiocchi.gabriel@gmail.com](mailto:baiocchi.gabriel@gmail.com)<br>
-      Website: [baioc.github.io](https://baioc.github.io/)<br>
+      Portfolio: [baioc.github.io/portfolio](https://baioc.github.io/portfolio/)<br>
       Telegram: @gbaioc<br>
 ---
 
@@ -18,20 +18,20 @@ sidebar:
 
 | Education |
 | ------ |
-| **Exchange period specializing in Engineering of <br>Embedded Systems and Connected Objects** (2020 - Ongoing)<br>Grenoble INP - Ensimag, France |
-| **Bachelor Degree in Computer Science** (2018 - Ongoing)<br>Universidade Federal de Santa Catarina, Brazil |
-| **Technical Degree in Electronics** (2014 - 2017)<br>Instituto Federal de Santa Catarina, Brazil |
+| **Exchange period specializing in Engineering of <br>Embedded Systems and Connected Objects** (2020 - Ongoing)<br>Ensimag - Grenoble INP, France |
+| **Bachelor Degree in Computer Science** (2018 - Ongoing)<br>Universidade Federal de Santa Catarina (UFSC), Brazil |
+| **Technical Degree in Electronics** (2014 - 2017)<br>Instituto Federal de Santa Catarina (IFSC), Brazil |
 
 | Skills |
 | ------ |
 | Proficient with **C** and **Scheme**. |
 | Well versed in **C++**, **Java** and **Python** programming. |
-| Solid notions of design patterns in both Functional <br>and Object-Oriented (OOP) paradigms. |
+| Solid notions of design patterns in both Functional <br>(FP) and Object-Oriented (OOP) paradigms. |
 | Comfortable with **Linux** and **git**. |
 | Disciplined and organized, which also apply to code. |
 
 | Languages |
 | ------ |
-| **English** - Fluent, B2 |
-| **French** - Intermediate, B1 |
+| **English** - Fluent |
+| **French** - Intermediate |
 | **Portuguese** (Brazilian) - Native |
