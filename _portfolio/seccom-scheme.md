@@ -3,6 +3,8 @@ title: "Matemática Funcional em Scheme"
 excerpt: "Minicurso ministrado durante a SECCOM 2019"
 header:
   teaser: /assets/images/wizard.png
+tags:
+  - algorithms
 ---
 
 Tive a experiência de ministrar um minicurso na [SECCOM 2019](https://seccom-ufsc.github.io/) - a Semana Acadêmica de Ciência da Computação e Sistemas de Informação da UFSC - sobre programação matemática funcional na linguagem Scheme.

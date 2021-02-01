@@ -3,6 +3,8 @@ title: "pygraphs"
 excerpt: "A Python package for the study of graph discrete data structures and algorithms"
 header:
   teaser: /assets/images/code.png
+tags:
+  - algorithms
 ---
 
 `pygraphs` is a Python package dedicated to the study of [graphs](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)) as discrete data structures and graph algorithms.

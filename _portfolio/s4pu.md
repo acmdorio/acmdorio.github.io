@@ -3,6 +3,8 @@ title: "S4PU - Simple Forth Processing Unit"
 excerpt: "A stack-based 16-bit CPU written in VHDL"
 header:
   teaser: /assets/images/s4pu.png
+tags:
+  - EDA
 ---
 
 Simple Forth Processing Unit (S4PU) is a 16-bit stack-based CPU that explores some of the ideas seen on [Koopman's "Stack Computers: the new wave"](https://users.ece.cmu.edu/~koopman/stack_computers/index.html).

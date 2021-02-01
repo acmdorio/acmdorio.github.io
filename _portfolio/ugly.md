@@ -3,11 +3,13 @@ title: "UGLy - An Unsafe Generic LibrarY"
 excerpt: "A C11 library with generic data structures, custom allocators and more"
 header:
   teaser: /assets/images/code.png
+tags:
+  - Generic Programming
 ---
 
 UGLy is a C(11) library used to apply the DRY principle and avoid re-implementing the same common data structures, procedures and macros everywhere.
 
-It is available on [GitLab](https://gitlab.com/baioc/UGLy) under the Artistic License.
+It is Open-Sourced on [GitLab](https://gitlab.com/baioc/UGLy).
 {: .notice--info}
 
 
