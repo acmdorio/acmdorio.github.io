@@ -118,6 +118,8 @@ defaults:
       layout: archive
       author_profile: true
       search: false
+      sidebar:
+        - text: <div id="arxivfeed"></div>
   # _portfolio
   - scope:
       path: ""

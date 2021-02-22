@@ -5,6 +5,8 @@ search: true
 classes: wide
 ---
 
+{% include arxiv.html %}
+
 Computer Science student from the Federal University of Santa Catarina ([UFSC](https://ufsc.br/)), currently doing an exchange at the École Nationale Supérieure d'Informatique et Mathématiques Appliquées of the Grenoble Institute of Technology ([Ensimag - Grenoble INP](https://ensimag.grenoble-inp.fr/en/education/embedded-systems-and-software-devices)).
 {: .text-justify}
 
