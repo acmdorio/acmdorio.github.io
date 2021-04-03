@@ -126,7 +126,7 @@ Honorable Mentions
 
 Another one from the venerable Wizard Book: a (lispy) [logic programming language interpreter](https://gitlab.com/baioc/paradigms/-/blob/master/Scheme/sicp/prolisp.scm) with built-in pattern-matching and unification.
 
-### Automatum-compiling macros
+### Automata-compiling macros
 
 [Here](https://gitlab.com/baioc/paradigms/-/blob/master/Scheme/misc/automata.scm) I simply implement the interpreter and the macro-time compiler for the FSM DSL as presented in Shriram Krishnamurthi's excelent [macro tutorial](https://cs.brown.edu/~sk/Publications/Papers/Published/sk-automata-macros/).
 

@@ -15,7 +15,7 @@ Formerly a research assistant at UFSC's Embedded Computing Laboratory ([ECL](htt
 
 This personal website acts as a CV, portfolio and blog.
 Posts will be scarce and written mainly for my own reference, but I would be glad to hear if someone else finds them useful.
-Topics discussed include, but are not limited to, personal interests such as Programming Language Theory, Programming Language Design & Implementation, Generic Programming, Advanced Game Programming Techniques, Computer Architecture and Historic Swordsmanship.
+Topics discussed include, but are not limited to, personal interests such as Programming Language Theory, Programming Language Design & Implementation, Generic Programming, Cybersecurity and Ethical Hacking, Computer Architecture and Historic Swordsmanship.
 {: .text-justify}
 
 
