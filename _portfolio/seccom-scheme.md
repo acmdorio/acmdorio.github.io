@@ -1,6 +1,7 @@
 ---
 title: "Matemática Funcional em Scheme"
 excerpt: "Minicurso ministrado durante a SECCOM 2019"
+last_modified_at: 2019-10-03
 header:
   teaser: /assets/images/wizard.png
 tags:

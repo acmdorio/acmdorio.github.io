@@ -1,6 +1,7 @@
 ---
 title: "S4PU - Simple Forth Processing Unit"
 excerpt: "A stack-based 16-bit CPU written in VHDL"
+last_modified_at: 2018-11-10
 header:
   teaser: /assets/images/s4pu.png
 tags:

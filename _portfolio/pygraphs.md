@@ -1,6 +1,7 @@
 ---
 title: "pygraphs"
 excerpt: "A Python package for the study of graph discrete data structures and algorithms"
+last_modified_at: 2019-11-08
 header:
   teaser: /assets/images/code.png
 tags:

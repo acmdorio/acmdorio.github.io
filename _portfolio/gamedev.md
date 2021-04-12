@@ -1,6 +1,7 @@
 ---
 title: "Video game prototypes"
 excerpt: "Some indie game prototypes"
+last_modified_at: 2020-12-05
 header:
   teaser: /assets/images/moonfable.png
 tags:
