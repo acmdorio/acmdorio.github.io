@@ -1,7 +1,6 @@
 ---
 permalink: /
 title: "Home"
-search: true
 classes: wide
 ---
 
