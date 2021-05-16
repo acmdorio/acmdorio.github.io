@@ -1,8 +1,8 @@
 main:
-  - title: "Curriculum"
-    url: /cv/
   - title: "Portfolio"
     url: /portfolio/
+  - title: "Curriculum"
+    url: /cv/
   - title: "Blog"
     url: /blog/
   - title: "Contact"

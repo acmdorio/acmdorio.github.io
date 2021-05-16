@@ -3,7 +3,7 @@ title: "UGLy - An Unsafe Generic LibrarY"
 excerpt: "A C11 library with generic data structures, custom allocators and more"
 last_modified_at: 2021-02-14
 header:
-  teaser: /assets/images/code.png
+  teaser: /assets/images/basic.png
 tags:
   - Generic Programming
 ---

@@ -19,7 +19,7 @@ masthead_title: "About"
 # logo: "/assets/images/avatar-88x88.png"
 email: baiocchi.gabriel@gmail.com
 github_username: baioc
-minimal_mistakes_skin: "contrast" # "mint", "contrast", "dark", "neon"
+minimal_mistakes_skin: "contrast" # "mint" | "contrast" | "dark" | "neon"
 search: true
 search_full_content: true
 
@@ -50,6 +50,7 @@ locale: "en"
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 include:
   - _pages
 
@@ -65,9 +66,8 @@ plugins:
 author:
   name: "Gabriel Baiocchi de Sant'Anna"
   avatar: "/assets/images/photo.jpg"
-  bio:  >- # this means ignore new lines
-    Computer Science student and former research assistant at the Embedded Computing Laboratory (ECL UFSC) Video Coding team, with a background in Electronics.
-  # location: "Brazil / France"
+  bio: "Computer Scientist / Software Engineer / Electronics Technician"
+  # location:
   links: # look for icons at https://fontawesome.com/icons/
     - label: "GitHub"
       icon: "fab fa-github"
@@ -115,8 +115,6 @@ defaults:
       layout: archive
       author_profile: true
       search: false
-      sidebar:
-        - text: <div id="arxivfeed"></div>
   # _portfolio
   - scope:
       path: ""
@@ -145,7 +143,7 @@ comments:
   disqus:
     shortname: "baioc"
 
-# for more information check out:
+# For more information, check out:
 # Utilities - https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/
 # Helpers - https://mmistakes.github.io/minimal-mistakes/docs/helpers/
 # Jekyll - https://jekyllrb.com/docs/

@@ -8,5 +8,3 @@ classes: wide
 sort_by: last_modified_at
 sort_order: reverse
 ---
-
-{% include arxiv.html %}

@@ -10,8 +10,6 @@ tags:
   - Programming Languages
 ---
 
-## New programming languages
-
 The number of programming languages grows at a slow, yet somewhat constant rate: the [Wikipedia page on programming language history](https://en.wikipedia.org/wiki/History_of_programming_languages) lists approximately 10 "notable" languages released in each decade since the 50s.
 Only a few of these, however, make it to [the top](https://www.tiobe.com/tiobe-index/); and we're not even considering the hundreds of "toy" programming languages which are never used by people other than the ones who made them.
 
@@ -23,7 +21,7 @@ Sometimes, even people that would really like to use some new language don't do 
 Meanwhile, the people that could be adding useful libraries, answering questions and making online tutorials don't want to waste their time doing so for this new language, as nobody uses it.
 This creates a chicken-and-egg sort of problem that can kill the popularity of most new programming languages.
 
-## Why would I care
+## New programming languages
 
 When someone decides to develop a serious programming language, they are aware it will take tremendous ammount of effort: they must design the language's syntax and semantics, implement an efficient compiler and/or interpreter, create development tools and gather a community around the language.
 There must be a good reason to go through all this.
