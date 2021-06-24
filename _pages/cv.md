@@ -32,7 +32,7 @@ sidebar:
 | Skills |
 | ------ |
 | Well versed with [**C**](https://gitlab.com/baioc/UGLy), [**C++**](https://gitlab.com/baioc/vtm), [**Scheme**](https://gitlab.com/baioc/paradigms/-/tree/master/Scheme), [**Python**](https://test.pypi.org/project/pygraphs/), [**Java**](https://baioc.github.io/hxdsp/), [**Octave**](https://github.com/baioc/re-multif), and [**OCaml**](https://gricad-gitlab.univ-grenoble-alpes.fr/baiocchg/salut). Also **Linux** and **git**. |
-| Solid notions of design patterns in both Functional (FP) and Object-Oriented (OOP) paradigms. |
+| Good notions of [Networks](https://www.credly.com/badges/2ce58e45-729f-4038-a374-e9e73061f6e3) & [**Cybersecurity**](https://www.credly.com/badges/5ba4072c-a443-44d9-9fda-cdea90ae3144), [**Functional Programming**](https://ensiwiki.ensimag.fr/index.php?title=Baiocchi_de_Sant’Anna_Gabriel_:_Simulation_and_Formal_Verification_of_Self-stabilizing_Algorithms) and [Hardware](https://baioc.github.io/portfolio/s4pu/) & [**Operating Systems**](https://baioc.github.io/portfolio/pcsea/). |
 | Disciplined and organized, which also apply to produced code. |
 
 | Publications |
