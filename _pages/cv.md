@@ -12,7 +12,7 @@ sidebar:
 
 | Experience |
 | ------ |
-| **Open Source Developer** at [MLH](https://fellowship.mlh.io/) (2021/06 - 2021/08)<br>Contributing to [Antlir](https://facebookincubator.github.io/antlir/), **Facebook's filesystem image builder**, during an MLH Fellowship. |
+| **Open Source Developer** at [Major League Hacking](https://fellowship.mlh.io/) (2021/06 - 2021/08)<br>Contributing to [Antlir](https://facebookincubator.github.io/antlir/), **Facebook's filesystem image builder**, during an MLH Fellowship. |
 | **Student Researcher on Formal Proofs** at [Verimag](https://www-verimag.univ-grenoble-alpes.fr/) (2021/02 - 2021/05)<br>Short research and development project dedicated to the simulation and **formal <br>verification** of **distributed Self-stabilizing Algorithms** in Lustre. |
 | **Video Coding Research Assistant** at [Embedded Computing Lab.](https://eclab.paginas.ufsc.br/) (2018 - 2020)<br>Research in the field of **video coding and compression**: Motion Estimation **algorithm <br>design** and implementation in VVC; study of Intra prediction methods in the HEVC <br>standard; hardware-accelerated video coding prototyping on a FPGA board. |
 | **Electronics Technician Intern** at [Inergiae](https://inergiae.com.br/) (2016 - 2017)<br>Assembly and testing of high voltage static converters. |
