@@ -31,7 +31,7 @@ sidebar:
 
 | Skills |
 | ------ |
-| Well versed with [**C**](https://gitlab.com/baioc/UGLy), [**Scheme**](https://baioc.github.io/scheme), [**Python**](https://test.pypi.org/project/pygraphs/), [**C++**](https://gitlab.com/baioc/vtm), [**F#**](http://www.formallysharp.codes/), [**Java**](https://baioc.github.io/hxdsp/), [**SQL**](https://github.com/facebookincubator/antlir/tree/main/tools/testinfra/runner) and [**Octave**](https://github.com/baioc/re-multif). Also **Linux** and **git**. |
+| Well versed with [**C**](https://gitlab.com/baioc/UGLy), [**Scheme**](https://baioc.github.io/scheme), [**Python**](https://baioc.github.io/portfolio/pycg), [**C++**](https://gitlab.com/baioc/vtm), [**F#**](https://github.com/baioc/FormallySharp), [**Java**](https://baioc.github.io/hxdsp/), [**SQL**](https://github.com/facebookincubator/antlir/tree/main/tools/testinfra/runner) and [**Octave**](https://github.com/baioc/re-multif). Also **Linux** and **git**. |
 | Good notions of [**Operating Systems**](https://baioc.github.io/portfolio/pcsea/), [**Functional Programming**](https://ensiwiki.ensimag.fr/index.php?title=Baiocchi_de_Sant’Anna_Gabriel_:_Simulation_and_Formal_Verification_of_Self-stabilizing_Algorithms) and [**Cybersecurity**](https://www.credly.com/badges/9330bc8e-972d-446e-80c7-499199d343f8). |
 | Disciplined and organized, which also apply to produced code. |
 
