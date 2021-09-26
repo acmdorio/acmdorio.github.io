@@ -14,7 +14,7 @@ This page collects some of those projects.
 
 ## 3D Modeling, Motion Capture and Transfer
 
-[Check it out!](/PokeHunt/)
+[Check it out!](https://github.com/RamAddict/INE5420-CG/releases/tag/v0.10.24)
 
 
 ## Othello against an AI
