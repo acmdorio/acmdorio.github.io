@@ -12,6 +12,11 @@ Just like every other computer science student and programmer, I've done a bit o
 This page collects some of those projects.
 
 
+## 3D Modeling, Motion Capture and Transfer
+
+[Check it out!](/PokeHunt/)
+
+
 ## Othello against an AI
 
 While following [Peter Norvig's "Paradigms of Artificial Intelligence Programming"](https://github.com/norvig/paip-lisp), I implemented some of the artificial Othello players described therein.
