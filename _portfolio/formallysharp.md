@@ -10,7 +10,7 @@ tags:
 ---
 
 [Formally#](https://github.com/baioc/FormallySharp) is an online formal language designer.<br>
-**You can check it out at [www.formallysharp.codes](http://www.formallysharp.codes)**
+**You can check it out at [formallysharp.azurewebsites.net](https://formallysharp.azurewebsites.net/)**
 
 
 Features
