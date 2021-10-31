@@ -1,7 +1,7 @@
 ---
 title: "Video game prototypes"
 excerpt: "Some indie game prototypes"
-last_modified_at: 2020-12-05
+last_modified_at: 2021-10-30
 header:
   teaser: /assets/images/moonfable.png
 tags:
@@ -10,6 +10,14 @@ tags:
 
 Just like every other computer science student and programmer, I've done a bit of [indie video game development](https://baioc.itch.io/) in personal projects or for game jams such as the [UFSC Game Jam](https://itch.io/jam/ufsc-game-jam-3) (I also helped organize its first editions).
 This page collects some of those projects.
+
+
+## A basic raycaster with Fable+Elmish
+
+<div id="elmish-app" style="background-color:black;">>
+  <script src="https://baioc.github.io/dagger3d/bundle.js"></script>
+</div>
+> Click the canvas above and press one of the WASD keys to start the game.
 
 
 ## 3D Modeling, Motion Capture and Transfer
