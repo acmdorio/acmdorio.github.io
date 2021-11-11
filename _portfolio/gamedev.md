@@ -14,7 +14,7 @@ This page collects some of those projects.
 
 ## A basic raycaster with Fable+Elmish
 
-<div id="elmish-app" style="background-color:black;">>
+<div id="elmish-app">
   <script src="https://baioc.github.io/dagger3d/bundle.js"></script>
 </div>
 > Click the canvas above and press one of the WASD keys to start the game.
