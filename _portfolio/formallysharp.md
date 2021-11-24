@@ -1,7 +1,7 @@
 ---
 title: "Formally#"
 excerpt: "An online tool for formal language (syntax) design"
-last_modified_at: 2021-10-20
+last_modified_at: 2021-11-24
 header:
   teaser: https://user-images.githubusercontent.com/27034173/129140042-eeba5460-0aa3-4b1c-9a58-8b948beccafe.png
 tags:
@@ -28,9 +28,6 @@ Notable features include:
 * Project persistency across (unauthenticated) sessions
 
 To-do list:
-* Translate the UI from portuguese to english
-* Implement a better regex parser, as the current one is very non-standard and doesn't have escape characters
-* Improve on-the-fly parsing perfomance
 * Automatic generation of random syntactically correct strings, which could be useful for testing purposes
 * Enforce referential integrity across rules in the UI
 * Visualize lexer FSMs and syntax diagrams
@@ -39,11 +36,11 @@ To-do list:
 Screenshots
 ----
 
+![tablet_blue_theme](https://user-images.githubusercontent.com/27034173/143199891-f7999ce6-454b-4a91-b54b-f6cd1ea2be47.png)
+
 ![poly](https://user-images.githubusercontent.com/27034173/129140042-eeba5460-0aa3-4b1c-9a58-8b948beccafe.png)
 
 ![calc](https://user-images.githubusercontent.com/27034173/133954409-d50c6a9b-7f58-48c5-a507-dcabaeba5b95.png)
-
-![lexer](https://user-images.githubusercontent.com/42824191/129277689-ab361e8a-a31b-4e9a-8e8b-0c57c34bc8bd.png)
 
 ![first_first](https://user-images.githubusercontent.com/27034173/133955408-82eb1c73-5ec2-434a-a313-643ea4a94ec4.png)
 
