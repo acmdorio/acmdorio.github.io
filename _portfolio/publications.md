@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-excerpt: "List of scientific texts with my name on them"
+excerpt: "List of scientific texts published with my name"
 last_modified_at: 2021-06-03
 header:
   teaser: /assets/images/heatmap.png

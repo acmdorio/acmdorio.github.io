@@ -1,6 +1,6 @@
 ---
 title: "PyCG"
-excerpt: "Interactive Graphical System"
+excerpt: "Desktop app for viewing and transforming 3D models"
 last_modified_at: 2021-10-02
 header:
   teaser: https://user-images.githubusercontent.com/27034173/131598578-02114b0e-6d33-455b-823b-3dfd36b59479.png
@@ -9,7 +9,7 @@ tags:
   - Computer Graphics
 ---
 
-This is a Interactive Graphical System made as a UFSC Computer Graphics (INE5420) project using [Qt for Python][PySide2].
+This is a desktop app for viewing and transforming 3D wireframe models, made as a UFSC Computer Graphics (INE5420) project using [Qt for Python][PySide2].
 Source code is available on [GitHub](https://github.com/baioc/PyCG).
 
 ![3D](https://user-images.githubusercontent.com/27034173/131598578-02114b0e-6d33-455b-823b-3dfd36b59479.png)

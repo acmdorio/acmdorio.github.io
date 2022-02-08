@@ -3,7 +3,7 @@ title: "UGLy - An Unsafe Generic LibrarY"
 excerpt: "A C11 library with generic data structures, custom allocators and more"
 last_modified_at: 2021-02-14
 header:
-  teaser: /assets/images/basic.png
+  teaser: /assets/images/code.png
 tags:
   - Generic Programming
 ---
@@ -18,7 +18,7 @@ Unsafe?
 ------
 
 It uses "unsafe" generics (`void *`) in the sense that all data types are seen as a sequence of bytes and the user is responsible for making sure they are properly interpreted (and memory aligned).
-It should be noted that the library's containers always use copy semantics and never "take ownership" of given elements, meaning the user is still expected to manage the lifetimes of dynamically allocated objects ("you allocate it, you free it").
+It should be noted that the library's containers always use copy semantics and never "take ownership" of given elements, meaning the user is still expected to manage the lifetimes of dynamically allocated objects (in summary: "you allocate it, you free it").
 
 The suggested use of UGLy would be as internal implementation for libraries which wrap it in a more "type-and-memory safe" API.
 
