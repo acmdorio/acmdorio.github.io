@@ -17,7 +17,6 @@ title: baioc
 title_separator: "|"
 masthead_title: "About"
 # logo: "/assets/images/avatar-88x88.png"
-email: baiocchi.gabriel@gmail.com
 github_username: baioc
 minimal_mistakes_skin: "contrast" # "mint" | "contrast" | "dark" | "neon"
 search: true
