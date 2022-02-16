@@ -12,6 +12,9 @@ tags:
 [Formally#](https://github.com/baioc/FormallySharp) is an online formal language designer.<br>
 **You can check it out at [formallysharp.azurewebsites.net](https://formallysharp.azurewebsites.net/)**
 
+To get a feel for how to use it, open the example project, `JSON`, and use the buttons to generate a lexer and a parser.
+After that, you can start typing in the recognition box. Your input will be syntactically checked on the fly.
+
 
 Features
 ----

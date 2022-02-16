@@ -84,7 +84,7 @@ Bytecode compiler and VM for Lox
 Most of it is written in standard C99, making use of features such as Flexible Array Members (FAMs), designated struct initializers and Variable-Length Arrays (VLAs, just once).
 
 Notably, Lox is an efficient, dynamically-typed, object-oriented, garbage-collected scripting language with some runtime introspection and support for closures and first-class functions.
-The implemented clox version uses a hand-written recursive descent parser (a.k.a. Pratt parser) and compiles down to bytecode targetting a stack-based VM that encompasses a Mark & Sweep GC and includes many useful optimizations such as string interning, NaN boxing and computed `goto`s for efficient instruction dispatch (requires [GCC's labels-as-values extension](https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html)).
+The implemented clox version uses a hand-written recursive descent parser (a Pratt parser) and compiles down to bytecode targetting a stack-based VM that encompasses a Mark & Sweep GC and includes many useful optimizations such as string interning, NaN boxing and computed `goto`s for efficient instruction dispatch (requires [GCC's labels-as-values extension](https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html)).
 
 
 A minimal BASIC simulator
