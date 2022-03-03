@@ -2,6 +2,7 @@
 title: "My private PL Zoo"
 excerpt: "Showcase of compilers and interpreters that implement toy Programming Languages"
 last_modified_at: 2021-01-28
+priority: 10
 header:
   teaser: /assets/images/scheme.png
 tags:
@@ -34,7 +35,7 @@ Yet another Scheme Metacircular Evaluator
 This is where the magic began: a Scheme interpreter written in Scheme following [Chapter 4 of The Wizard Book](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-25.html#%_chap_4).
 Differently than what most people do, however, I kept extending the first evaluator with the variations that followed in the next sections (instead of building them upon a minimal, scratch version).
 
-[The result](https://gitlab.com/baioc/paradigms/-/blob/master/Scheme/sicp/lisp.scm) turned up as a macro-less R5RS(-ish) implementation that separates syntactic analysis from the actual interpreter execution and additionally provides built-in `amb` and `try-catch` special forms for nondeterministic computing, as well as a `retry` command in the REPL that backtracks to the most recent nondeterministic fork and tries a different path.
+[The result](https://github.com/baioc/paradigms/blob/master/Scheme/sicp/meta.scm) turned up as a macro-less R5RS(-ish) implementation that separates syntactic analysis from the actual interpreter execution and additionally provides built-in `amb` and `try-catch` special forms for nondeterministic computing, as well as a `retry` command in the REPL that backtracks to the most recent nondeterministic fork and tries a different path.
 
 | ![](/assets/images/scheme.png) |
 |:--:|
@@ -80,19 +81,19 @@ Differently than what most people do, however, I kept extending the first evalua
 Bytecode compiler and VM for Lox
 ------
 
-[This](https://github.com/baioc/clox) was my implementation of Robert Nystrom's [Crafting Interpreters](https://www.craftinginterpreters.com/) single-pass compiler and bytecode virtual machine for the Lox programming language, coming from what is probably the best (also free) beginner-friendly resource (definitely much better than [The Dragon Book](https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools)) for learning about how programming languages are implemented.
+[This](https://github.com/baioc/clox) was my implementation of Robert Nystrom's [Crafting Interpreters](https://www.craftinginterpreters.com/) single-pass compiler and bytecode virtual machine for the Lox programming language, coming from what is probably the best (also free) beginner-friendly resource for learning about how programming languages are implemented.
 Most of it is written in standard C99, making use of features such as Flexible Array Members (FAMs), designated struct initializers and Variable-Length Arrays (VLAs, just once).
 
 Notably, Lox is an efficient, dynamically-typed, object-oriented, garbage-collected scripting language with some runtime introspection and support for closures and first-class functions.
-The implemented clox version uses a hand-written recursive descent parser (a Pratt parser) and compiles down to bytecode targetting a stack-based VM that encompasses a Mark & Sweep GC and includes many useful optimizations such as string interning, NaN boxing and computed `goto`s for efficient instruction dispatch (requires [GCC's labels-as-values extension](https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html)).
+The implemented clox version uses a hand-written recursive descent (Pratt) parser and compiles down to bytecode targetting a stack-based VM that encompasses a Mark & Sweep GC and includes many useful optimizations such as string interning, NaN boxing and computed `goto`s for efficient instruction dispatch (requires [GCC's labels-as-values extension](https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html)).
 
 
 A minimal BASIC simulator
 ------
 
-Wanting to improve my french before going abroad on an exchange program, I decided to acquire some programming-related vocabulary by skimming through the original, untranslated version of [Developing Applications With Objective Caml (DAWOC)](http://caml.inria.fr/pub/docs/oreilly-book/) while learning F# instead of OCaml.
+Wanting to improve my french before going abroad on an exchange program, I decided to acquire some programming-related vocabulary by skimming through the original, untranslated version of [Developing Applications With Objective Caml](http://caml.inria.fr/pub/docs/oreilly-book/) while learning F# instead of OCaml.
 One example application in Chapter 6 caught my attention: it was a very minimal BASIC interpreter which I extended by implementing system directives (using as reference whatever I could find online about the old Microsoft BASIC) and by adding support for subroutines.
-The [entire simulator](https://gitlab.com/baioc/paradigms/-/tree/master/F%23/basic) is quite short given that BASIC is a very ~~basic~~ simple non-structured imperative language with dynamic types and no notion of scopes or even functions.
+The [entire simulator](https://github.com/baioc/paradigms/tree/master/F%23/basic) is quite short given that BASIC is a very ~~basic~~ simple non-structured imperative language with dynamic types and no notion of scopes or even functions.
 In fact, a considerable part of its development time was dedicated to the hand-written shift-reduce parser, which was much harder to grasp than the top-down parsers I had coded until then.
 
 | ![](/assets/images/basic.png) |
@@ -125,11 +126,11 @@ Honorable Mentions
 
 ### Logic programming in lisp
 
-Another one from the venerable Wizard Book: a (lispy) [logic programming language interpreter](https://gitlab.com/baioc/paradigms/-/blob/master/Scheme/sicp/prolisp.scm) with built-in pattern-matching and unification.
+Another one from the venerable Wizard Book: a (lispy) [logic programming language interpreter](https://github.com/baioc/paradigms/blob/master/Scheme/sicp/prolisp.scm) with built-in pattern-matching and unification.
 
 ### Automata-compiling macros
 
-[Here](https://gitlab.com/baioc/paradigms/-/blob/master/Scheme/misc/automata.scm) I simply implement the interpreter and the macro-time compiler for the FSM DSL as presented in Shriram Krishnamurthi's excelent [macro tutorial](https://cs.brown.edu/~sk/Publications/Papers/Published/sk-automata-macros/).
+[Here](https://github.com/baioc/paradigms/blob/master/Scheme/misc/automata.scm) I simply implement the interpreter and the macro-time compiler for the FSM DSL as presented in Shriram Krishnamurthi's excelent [macro tutorial](https://cs.brown.edu/~sk/Publications/Papers/Published/sk-automata-macros/).
 
 ### Assembling Forth
 

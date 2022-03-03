@@ -1,7 +1,8 @@
 ---
 title: "Matemática Funcional em Scheme"
-excerpt: "Minicurso ministrado durante a SECCOM 2019 da UFSC"
+excerpt: "[pt_BR] SICP-based Scheme crash course I taught during UFSC's SECCOM 2019"
 last_modified_at: 2019-10-03
+priority: 6
 header:
   teaser: /assets/images/wizard.png
 tags:

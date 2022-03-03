@@ -2,15 +2,16 @@
 title: "UGLy - An Unsafe Generic LibrarY"
 excerpt: "A C11 library with generic data structures, custom allocators and more"
 last_modified_at: 2021-02-14
+priority: 13
 header:
-  teaser: /assets/images/code.png
+  teaser: https://gitlab.com/uploads/-/system/project/avatar/22162117/c.jpg
 tags:
   - Generic Programming
 ---
 
 UGLy is a C(11) library used to apply the DRY principle and avoid re-implementing the same common data structures, procedures and macros everywhere.
 
-It is Open-Sourced on [GitLab](https://gitlab.com/baioc/UGLy).
+You can check out the open-source project on [GitLab](https://gitlab.com/baioc/UGLy).
 {: .notice--info}
 
 
@@ -35,11 +36,11 @@ Currently implemented generic data structures:
 
 ### Custom memory allocator support
 
-Whenever memory allocations are needed, the user can choose to provide his own custom allocator or use one of the generic built-in ones (most of which allocate on a user-provided buffer):
+Whenever memory allocations are needed, the user can choose to provide his own custom allocator or use one of the generic, built-in ones (most of which allocate on a user-provided buffer):
 - `STDLIB_ALLOCATOR`: simply calls `malloc`, `realloc` and `free` from stdlib.
-- `pool_allocator_t`: fixed maximum allocation size, zero overhead and no external fragmentation while supporting deallocations in any order.
+- `pool_allocator_t`: fixed maximum allocation size and no external fragmentation while supporting deallocations in any order.
 - `stack_allocator_t`: variable allocation size, can free and do in-place reallocations but only in Last-In-First-Out fashion.
-- `arena_allocator_t`: variable allocation size, almost no memory overhead, never frees.
+- `arena_allocator_t`: variable allocation size, zero memory overhead, never frees.
 
 ### Descriptive type definitions
 

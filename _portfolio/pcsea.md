@@ -2,8 +2,9 @@
 title: "PCSEA - Projet Système d'Exploitation"
 excerpt: "A simple x86 OS from scratch"
 last_modified_at: 2021-04-30
+priority: 18
 header:
-  teaser: https://ensiwiki.ensimag.fr/images/5/58/CalvadOS3.png
+  teaser: http://ninvaders.sourceforge.net/screenshot1.jpg
 tags:
   - Linux
 ---

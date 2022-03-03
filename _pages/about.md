@@ -4,7 +4,7 @@ title: "Home"
 classes: wide
 ---
 
-Hi there! 👋
+Hello, World! 👋
 
 This personal website acts as a portfolio, online resume and blog.
 While posts will be scarce and written mainly for my own reference, I would be glad to hear if someone else finds them useful.

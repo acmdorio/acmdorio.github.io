@@ -2,6 +2,7 @@
 title: "pygraphs"
 excerpt: "A Python package for the study of graph discrete data structures and algorithms"
 last_modified_at: 2019-11-08
+priority: 4
 header:
   teaser: https://gitlab.com/uploads/-/system/project/avatar/14881973/knesermagic.png
 tags:
@@ -35,7 +36,7 @@ Usage
 ----
 
 **Note:** at this point, distributed packages are compatible with **Linux only** and require a recent version of `libstdc++`.
-{: .notice}
+{: .notice--warning}
 
 1. Install via [pip](https://test.pypi.org/project/pygraphs/){: .btn .btn--info}:
 

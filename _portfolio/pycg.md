@@ -1,7 +1,8 @@
 ---
 title: "PyCG"
-excerpt: "Desktop app for viewing and transforming 3D models"
+excerpt: "Simple desktop app to view and transform 3D models"
 last_modified_at: 2021-10-02
+priority: 15
 header:
   teaser: https://user-images.githubusercontent.com/27034173/131598578-02114b0e-6d33-455b-823b-3dfd36b59479.png
 tags:

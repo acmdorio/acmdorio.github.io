@@ -2,6 +2,7 @@
 title: "Publications"
 excerpt: "List of scientific texts published with my name"
 last_modified_at: 2021-06-03
+priority: 17
 header:
   teaser: /assets/images/heatmap.png
 classes: wide

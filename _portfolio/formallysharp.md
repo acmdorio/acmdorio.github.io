@@ -2,6 +2,7 @@
 title: "Formally#"
 excerpt: "Full-stack web app for formal language (syntax) design"
 last_modified_at: 2021-11-24
+priority: 19
 header:
   teaser: https://user-images.githubusercontent.com/27034173/129140042-eeba5460-0aa3-4b1c-9a58-8b948beccafe.png
 tags:
@@ -14,7 +15,7 @@ tags:
 
 To get a feel for how to use it, open the example project, `JSON`, and use the buttons to generate a lexer and a parser.
 After that, you can start typing in the recognition box. Your input will be syntactically checked on the fly.
-
+{: .notice}
 
 Features
 ----
