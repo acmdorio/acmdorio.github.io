@@ -19,8 +19,8 @@ Design
 The machine runs on a subset of the [Forth programming language](https://en.wikipedia.org/wiki/Forth_(programming_language)) with 32 instructions, thus being considered a [Minimal Instruction Set Computer (MISC)](https://en.wikipedia.org/wiki/Minimal_instruction_set_computer) architecture.
 It fits what Koopman calls the "ML0 design":
   - Multiple Stacks: one dedicated to operating data and another to store return addresses.
-  - Large Stack Buffer: although "large" is debatable, here it means the stack does not reside in main memory.
-  - 0-Operand: there are no operands associated with an instruction's opcode, the top of the data stack is implicitly used instead.
+  - Large Stack Buffer: although "large" is debatable, here it means the stack resides in on-chip memory and does not consume main memory bandwidth.
+  - 0-Operand: there are no operands associated with most instructions' opcode, the top of the data stack is implicitly used instead.
 
 As is the case with most stack computers, S4PU's strength and weakness is its simplicity.
 While performance levels will never reach those of pipelined superscalar processors, stack-based CPUs are generally simpler, cheaper and less power-hungry.
