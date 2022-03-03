@@ -4,7 +4,7 @@ excerpt: "A simple x86 OS from scratch"
 last_modified_at: 2021-04-30
 priority: 18
 header:
-  teaser: http://ninvaders.sourceforge.net/screenshot1.jpg
+  teaser: https://user-images.githubusercontent.com/27034173/156652368-4691f935-6b24-4513-80eb-0af4efe07d7f.jpg
 tags:
   - Linux
 ---
