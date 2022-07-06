@@ -10,7 +10,7 @@ tags:
   - Programming Languages
 ---
 
-[Formally#](https://github.com/baioc/FormallySharp) is an online formal language designer.<br>
+[Formally#](https://github.com/baioc/FormallySharp) is an online formal language designer.<br/>
 **You can check it out at [formallysharp.azurewebsites.net](https://formallysharp.azurewebsites.net/)**
 
 To get a feel for how to use it, open the example project, `JSON`, and use the buttons to generate a lexer and a parser.

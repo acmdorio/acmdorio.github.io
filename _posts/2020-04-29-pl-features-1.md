@@ -3,7 +3,7 @@ title: "An opinionated guide to programming language features"
 excerpt: "What are some core features to look forward to on a programming language"
 last_modified_at: 2021-01-03
 header:
-  teaser: /assets/images/code.png
+  teaser: /assets/images/scheme.png
 categories:
   - blog
 tags:
