@@ -13,11 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: baioc
+title: acmdorio
 title_separator: "|"
 masthead_title: "About"
 # logo: "/assets/images/avatar-88x88.png"
-github_username: baioc
+github_username: acmdorio
 minimal_mistakes_skin: "contrast" # "mint" | "contrast" | "dark" | "neon"
 search: true
 search_full_content: true
@@ -26,7 +26,7 @@ search_full_content: true
 # found at https://github.com/github/pages-gem/issues/399 and also
 # https://github.com/jekyll/github-metadata/blob/master/docs/configuration.md#configuration
 github: [metadata]
-repository: baioc/baioc.github.io
+repository: acmdorio/acmdorio.github.io
 
 # Build settings
 markdown: kramdown
@@ -63,20 +63,20 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name: "Gabriel Baiocchi de Sant'Anna"
+  name: "André Mendes"
   avatar: "/assets/images/photo.jpg"
   bio: "Computer Scientist / Software Engineer / Electronics Technician"
   # location:
   links: # look for icons at https://fontawesome.com/icons/
     - label: "GitHub"
       icon: "fab fa-github"
-      url: "https://github.com/baioc"
+      url: "https://github.com/acmdorio"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/baioc/"
+      url: "https://www.linkedin.com/in/acmdorio/"
     - label: "Lattes"
       icon: "fas fa-eye"
-      url: "http://lattes.cnpq.br/5048826722066095"
+      url: "http://lattes.cnpq.br/6705224212672699"
 
 # enables MathJax, as explained at https://alan97.github.io/random/mathjax/
 # with reference to documentation at https://mmistakes.github.io/minimal-mistakes/docs/javascript/
@@ -87,7 +87,7 @@ footer:
   # links:
   #   - label: "Twitter"
   #     icon: "fab fa-fw fa-twitter-square"
-  #     url: "https://twitter.com/gbaiocs"
+  #     url: "https://twitter.com/acmdorio"
 
 defaults:
   # _posts
@@ -140,7 +140,7 @@ collections:
 comments:
   provider: "disqus"
   disqus:
-    shortname: "baioc"
+    shortname: "acmdorio"
 
 # For more information, check out:
 # Utilities - https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/
